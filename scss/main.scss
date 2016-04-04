@@ -63,7 +63,7 @@ body {
     transition:margin .5s ease;
     .nav-active &{
       margin:0 -220px 0 220px;
-    } 
+    }
   }
 }
 .holder{
@@ -100,6 +100,7 @@ body {
   }
 }
 .nav{
+  float: right;
   display: inline-block;
   vertical-align: middle;
   margin-left:80px;
@@ -108,7 +109,6 @@ body {
     margin-left: 15px;
   }
   @include media('<desktop') {
-    width: 100%;
     text-align: center;
     margin: 0;
   }
@@ -206,7 +206,7 @@ body {
   }
 }
 .nav-active{
-  .nav-opener{ 
+  .nav-opener{
     span{
       opacity:0;
     }
@@ -616,7 +616,7 @@ body {
   .orange{
     margin:0 0 32px;
     @include media('<tablet') {
-      margin-bottom:29px; 
+      margin-bottom:29px;
     }
   }
   p{
@@ -828,31 +828,31 @@ body {
   .second{
     &:after{
       left: 4px;
-      top: 0;     
+      top: 0;
     }
   }
   .third{
     &:after{
       left: -4px;
-      top: -9px;     
+      top: -9px;
     }
   }
   .forth{
     &:after{
       left: 4px;
-      top: 0;     
+      top: 0;
     }
   }
   .fifth{
     &:after{
       top: -4px;
-      left: -3px;     
+      left: -3px;
     }
   }
   .sixth{
     &:after{
       top: -7px;
-      left: 6px;     
+      left: 6px;
     }
   }
 }
@@ -1069,7 +1069,7 @@ body {
   .orange{
     margin: 0 0 13px;
     @include media('<tablet') {
-        margin: 0 0 11px; 
+        margin: 0 0 11px;
     }
   }
   .btn{
@@ -1330,7 +1330,7 @@ body {
     padding-bottom:135px;
     @include media('<desktop') {
      padding-top:20px;
-     padding-bottom: 30px; 
+     padding-bottom: 30px;
     }
   }
 }
