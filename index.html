@@ -23,10 +23,10 @@
 						<div class="drop">
 							<ul>
 								<li><a href="#">Home</a></li>
-								<li><a href="#">Solutions</a></li>
-								<li><a href="#">About</a></li>
+								<li><a href="#solutions">Solutions</a></li>
+								<li><a href="#about">About</a></li>
 								<!--<li><a href="#">Experience</a></li>-->
-								<li><a href="#">Team</a></li>
+								<li><a href="#team">Team</a></li>
 								<!--<li><a href="#">Examples &amp; Prices</a></li>
 								<li><a href="#">Blog</a></li>-->
 							</ul>
@@ -47,6 +47,7 @@
 			</div>
 			<main id="main" role="main">
 				<section class="intro">
+                    <a name="solutions"></a>
 					<div class="holder">
 						<div class="intro-box">
 							<p><span class="orange">we work</span> remotely!</p>
@@ -96,6 +97,7 @@
 					</div>
 				</section>
 				<section class="about-us">
+                    <a name="about"></a>
 					<div class="holder">
 						<h2>About us</h2>
 						<div class="company">
@@ -287,6 +289,7 @@
 				</section>
                 -->
 				<section class="team">
+                    <a name="team"></a>
 					<div class="holder">
 						<div class="team-text">
 							<h2>Who we are?</h2>
@@ -346,7 +349,6 @@ He is also managing our biggest project and the clients love that he has a deep 
 						</div>
 					</div>
 				</section>
-<!--
                 <section class="values">
 					<div class="holder">
 						<div class="values-text">
@@ -388,7 +390,7 @@ He is also managing our biggest project and the clients love that he has a deep 
 						</ul>
 					</div>
 				</section>
-				<section class="featured">
+<!--				<section class="featured">
 					<div class="holder">
 						<h2>Featured</h2>
 						<span class="orange">Trainings, conferences, products</span>
@@ -506,29 +508,29 @@ He is also managing our biggest project and the clients love that he has a deep 
 					<div class="social-media">
 						<h4>Social media</h4>
 						<ul>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-							<li><a href="#"><i class="fa fa-rss"></i></a></li>
+							<li><a href="http://twitter.com/happyteamio"><i class="fa fa-twitter"></i></a></li>
+							<!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
+							<li><a href="https://www.linkedin.com/company/happy-team-sp--z-o-o-"><i class="fa fa-linkedin"></i></a></li>
+							<!-- <li><a href="#"><i class="fa fa-rss"></i></a></li> -->
 						</ul>
 					</div>
 					<div class="contact-form">
 						<h4>Write to us</h4>
-						<form action="#">
+						<form action="https://formspree.io/contact@happyteam.io" method="POST">
 							<div class="row">
-								<input type="text" placeholder="name">
+								<input name="name" type="text" placeholder="name">
 							</div>
 							<div class="row">
-								<input type="email" placeholder="email">
+								<input name="email" type="email" placeholder="email">
 							</div>
 							<div class="row">
-								<input type="tel" placeholder="phone">
+								<input name="phone" type="tel" placeholder="phone">
 							</div>
 							<div class="row">
-								<textarea cols="18" rows="2" placeholder="inquiry"></textarea>
+								<textarea name="inquiry" cols="18" rows="2" placeholder="inquiry"></textarea>
 							</div>
 							<div class="row">
-								<input type="submit" value="Send message">
+								<input name="send" type="submit" value="Send message">
 							</div>
 						</form>
 					</div>
