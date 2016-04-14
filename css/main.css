@@ -1840,4 +1840,8 @@ input[type='submit'] {
     .popular,
     .recent {
       width: 100%; } }
+
+[class^=devicon-] {
+  font-size: 50px;
+  color: #484848; }
 /*# sourceMappingURL=main.css.map */
