@@ -713,6 +713,12 @@ input[type='submit'] {
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg); }
 
+a.anchor {
+  display: block;
+  position: relative;
+  top: -81px;
+  visibility: hidden; }
+
 .promo {
   padding-top: 87px;
   border-bottom: 1px solid #b5b5b4; }

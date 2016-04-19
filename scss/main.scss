@@ -223,6 +223,14 @@ body {
     }
   }
 }
+a {
+    &.anchor {
+        display: block;
+        position: relative;
+        top: -81px; // height of sticky header
+        visibility: hidden;
+    }
+}
 .promo{
   padding-top:87px;
   border-bottom:1px solid #b5b5b4;
