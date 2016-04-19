@@ -4,7 +4,7 @@ $(document).ready(function(){
                 var href = $.attr(this, 'href');
                 var offset = 0;
                 if(href !== "#") {
-                    offset = $('a[name^="' + href.substring(1) + '"]').offset().top 
+                    offset = $('a[name^="' + href.substring(1) + '"]').offset().top - $("#header").height() 
                 }
                 $root.animate({
                     scrollTop: offset

@@ -76,8 +76,9 @@ body {
 #header{
   background: $white;
   box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.23);
-  position: relative;
-  z-index: 3;
+  position: fixed;
+  width: 100%;
+  z-index: 15;
   .holder{
     padding-top: 20px;
     padding-bottom:18px;
@@ -223,7 +224,7 @@ body {
   }
 }
 .promo{
-  padding-top:7px;
+  padding-top:87px;
   border-bottom:1px solid #b5b5b4;
     @include media('<tablet') {
     height:310px;
