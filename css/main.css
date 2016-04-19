@@ -1528,7 +1528,7 @@ input[type='submit'] {
   color: #fff; }
   #footer .holder {
     padding-top: 65px;
-    padding-bottom: 115px; }
+    padding-bottom: 45px; }
     @media (max-width: 1023px) {
       #footer .holder {
         padding: 50px 15px; } }
