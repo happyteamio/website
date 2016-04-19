@@ -1246,7 +1246,6 @@ a {
     margin: 0;
     font-style: normal;
     br{
-      display: none;
       @include media('<tablet') {
         display: inline-block;
       }

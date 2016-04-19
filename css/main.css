@@ -1601,11 +1601,9 @@ a.anchor {
     display: inline-block;
     margin: 0;
     font-style: normal; }
-    .contact-us address br {
-      display: none; }
-      @media (max-width: 767px) {
-        .contact-us address br {
-          display: inline-block; } }
+    @media (max-width: 767px) {
+      .contact-us address br {
+        display: inline-block; } }
   .contact-us a {
     display: inline-block;
     color: inherit; }
