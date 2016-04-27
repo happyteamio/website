@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	        var $root = $('html, body');
-            $('a').click(function(e) {
+            $('.nav .drop a').click(function(e) {
                 e.preventDefault();
 
                 var href = $.attr(this, 'href');
@@ -13,7 +13,6 @@ $(document).ready(function(){
                 }, 500, function () {
                     window.location.hash = href;
                 });
-                return false;
             });
         });
 

@@ -101,7 +101,7 @@ function initMobileNav() {
 			hideOnClickOutside: false,
 			menuActiveClass: 'nav-active',
 			menuOpener: '.nav-opener',
-			menuDrop: '.nav-drop',
+			menuDrop: '.drop',
 			toggleEvent: 'click',
 			outsideClickEvent: 'click touchstart pointerdown MSPointerDown'
 		}, options);
@@ -136,8 +136,9 @@ function initMobileNav() {
 				e.preventDefault();
 				self.toggle();
 			};
-
+			
 			this.opener.on(this.options.toggleEvent, this.openerClickHandler);
+			this.drop.on(this.options.toggleEvent, this.openerClickHandler);
 		},
 		isOpened: function() {
 			return this.container.hasClass(this.options.menuActiveClass);
