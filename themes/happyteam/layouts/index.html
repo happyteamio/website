@@ -1,17 +1,363 @@
 {{ partial "header.html" . }}
 
-<h1>posts</h1>
-{{ range first 10 .Data.Pages }}
-{{ if eq .Type "post"}}
-<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-{{ end }}
-{{ end }}
-
-<h1>pages</h1>
-{{ range .Data.Pages }}
-{{ if or (eq .Type "page") (eq .Type "about") }}
-<h2><a href="{{ .Permalink }}">{{ .Type }} - {{ .Title }} - {{ .RelPermalink }}</a></h2>
-{{ end }}
-{{ end }}
-
+	<div id="wrapper">
+		<div class="w1">
+			<header id="header">
+				<div class="holder">
+					<div class="logo">
+						<a href="#">
+							<img src="images/logo.png" height="39" width="262" alt="HappyTeam">
+						</a>
+					</div>
+					<nav class="nav">
+						<a href="#" class="nav-opener"><span>Menu</span></a>
+						<div class="drop">
+							<ul>
+								<li><a href="#">Home</a></li>
+								<li><a href="#solutions">Solutions</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#team">Team</a></li>
+                                <li><a href="#contact">Contact</a></li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</header>
+			<div class="promo">
+				<div class="holder">
+					<img src="images/bg-promo.png" height="463" width="1142" alt="image description">
+					<div class="promo-holder">
+						<h1>Happy Team <br><img src="images/ico1.png" alt="image description"> Happy Client<span>.</span></h1>
+						<div class="box-text">
+							<p>Software Solutions <span class="orange">for your company</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<main id="main" role="main">
+				<section class="intro">
+                    <a class="anchor" name="solutions"></a>
+					<div class="holder">
+						<div class="intro-box">
+							<p><span class="orange">we work</span> remotely!</p>
+						</div>
+						<div class="intro-text">
+							<h2>What we do?</h2>
+							<p>We deliver dedicated software solutions and provide consultancy to a wide variety of industries. <span class="orange">That includes:</span></p>
+						</div>
+						<ul>
+							<li>
+								<div class="img-holder">
+									<img src="images/ico2.png" alt="image description">
+								</div>
+								<div class="text-holder">
+									<h6>web-based</h6>
+									<p>projects</p>
+								</div>
+							</li>
+							<li>
+								<div class="img-holder phone">
+									<img src="images/ico3.png"  alt="image description">
+								</div>
+								<div class="text-holder">
+									<h6>mobile native</h6>
+									<p>and hybrid apps</p>
+								</div>
+							</li>
+							<li>
+								<div class="img-holder">
+									<img src="images/ico4.png"  alt="image description">
+								</div>
+								<div class="text-holder">
+									<h6>desktop apps</h6>
+									<p>and backend services</p>
+								</div>
+							</li>
+							<li>
+								<div class="img-holder">
+									<img src="images/ico5.png"  alt="image description">
+								</div>
+								<div class="text-holder">
+									<h6>data storage</h6>
+									<p>and manipulation</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="about-us">
+                    <a class="anchor" name="about"></a>
+					<div class="holder">
+						<h2>About us</h2>
+						<div class="company">
+							<h3><span class="orange">The</span> Company</h3>
+							<p>Happy Team was founded in 2015 when 5 software developers, who enjoyed working together, decided to go independent and fully unlock their potential as a team.</p>
+							<div class="open-close">
+								<div class="slide">
+									<p>.NET Framework, C# and JavaScript are the tools being extensively used by the team on a daily basis. But over the course of years team members gathered experience in delivering ASP.NET MVC websites, WPF desktop applications, Single Page Applications, native iOS apps and hybrid mobile apps.</p>
+                                    <p>
+                                        It's not only writing code but also exchanging opinions and ideas that's important for the team's growth. HappyTeam loves people and communities. Founders of <a href="http://devday.pl">DevDay</a> and organizers of <a href="http://konferencjaget.net">GET.NET</a> and <a href="http://www.meetup.com/dev-LDZ/">dev@LDZ meetup</a> are a part of the team. Most of the team members are also successful international conference speakers.
+                                    </p>
+								</div>
+								<a class="opener" href="#"><span class="more">read more</span> <span class="less">read less</span> <span class="ico"><i class="fa fa-angle-down"></i></span></a>
+							</div>
+						</div>
+						<div class="technologies">
+							<h3>Technologies</h3>
+							<ul>
+                                <li>
+                                    <i class="devicon-csharp-plain" title="C#"></i>
+                                </li>
+                                <li>
+                                    <i class="devicon-javascript-plain" title="javascript"></i>
+                                </li>
+                                <li>
+                                    <i class="devicon-java-plain" title="java"></i>
+                                </li>
+                                <li>
+                                    <i class="devicon-dot-net-plain" title=".NET"></i>
+                                </li>
+                                <li>
+                                    <i class="devicon-php-plain" title="PHP"></i>
+                                </li>
+                                <li>
+                                    <i class="devicon-angularjs-plain" title="Angular.js"></i>
+                                </li>
+                                <li>
+                                    <i class="devicon-html5-plain" title="HTML 5"></i>
+                                </li>
+                                <li>
+                                    <i class="devicon-css3-plain" title="CSS 3"></i>
+                                </li>
+                                <li>
+                                    <i class="devicon-sass-plain" title="sass"></i>
+                                </li>
+                                <li>
+                                    <i class="devicon-backbonejs-plain" title="Backbone.js"></i>
+                                </li>
+                                <li>
+                                    <i class="devicon-bootstrap-plain" title="bootstrap"></i>
+                                </li>
+                                <li>
+                                    <i class="devicon-nodejs-plain" title="Node.js"></i>
+                                </li>
+                                <li>
+                                    <i class="devicon-grunt-plain" title="grunt"></i>
+                                </li>
+                                <li>
+                                    <i class="devicon-gulp-plain" title="gulp"></i>
+                                </li>
+                                <li>
+                                    <i class="devicon-jquery-plain" title="jquery"></i>
+                                </li>
+                                <li>
+                                    <i class="devicon-android-plain" title="android"></i>
+                                </li>
+                                <li>
+                                    <i class="devicon-apple-plain" title="Apple"></i>
+                                </li>
+                                <li>
+                                    <i class="devicon-git-plain" title="git"></i>
+                                </li>
+                                <li>
+                                    <i class="devicon-redis-plain" title="redis"></i>
+                                </li>
+                                <li>
+                                    <i class="devicon-windows8-plain" title="windows"></i>
+                                </li>
+							</ul>
+						</div>
+					</div>
+				</section>
+                <section class="team">
+                    <a class="anchor" name="team"></a>
+					<div class="holder">
+						<div class="team-text">
+							<h2>Who we are?</h2>
+							<span class="orange">The Team</span>
+							<p>Happy Team supports customers from around the world in their business by providing them with smart and passionate software developers. Every one of them spent last decade expanding his skills in software development field choosing different paths and technologies.</p>
+							<ul>
+								<li>
+									<div class="img-holder">
+										<img src="images/biegal.png" alt="Marcin Biegała">
+									</div>
+									<span class="name">Marcin Biegała</span>
+									<span class="position">Happy Developer</span>
+									<p>Dev, motorcyclist, dreamer and coffee lover. He starts every day with a new idea and strives to be at least a bit better by sunset. No one told him that some things are not possible in code, so he does it all.</p>
+								</li>
+								<li>
+									<div class="img-holder second">
+                                        <img src="images/mihcall.png" alt="Michał Śliwoń">
+									</div>
+									<span class="name">Michał Śliwoń</span>
+									<span class="position">Happy Developer</span>
+									<p>Michał is a passionate software developer touching everything from C# to Javascript frameworks, not afraid of F# and Objective-C. He loves meetups and conferences.</p>
+								</li>
+								<li>
+									<div class="img-holder third">
+										<img src="images/kuba.png" alt="Kuba Waliński">
+									</div>
+									<span class="name">Jakub Waliński</span>
+									<span class="position">Happy Developer</span>
+                                    <p>Enthusiastic JS afficionado sharing his passion for the front-end at various international conferences. He is also managing our biggest project and the clients love his deep understanding of their business model and problem domain.</p>
+								</li>
+								<li>
+									<div class="img-holder forth">
+										<img src="images/eldhash.png" alt="image-description">
+									</div>
+									<span class="name">Maciej Woźniak</span>
+									<span class="position">Happy Developer</span>
+									<p>Software dev, interested in functional programming and learning new programming languages in general. Dreams of having an animal shelter. Also, a tea enthusiast, runner, gamer.</p>
+								</li>
+								<li>
+									<div class="img-holder fifth">
+										<img src="images/wilku.png" alt="Marcin Wilczyński">
+									</div>
+									<span class="name">Marcin Wilczyński</span>
+									<span class="position">Happy Developer</span>
+									<p>Backend developer trying to understand the magic of JavaScript. The one thing that scares him is SharePoint, besides that he's afraid of nothing! In his spare time he travels across Poland on a motorcycle just to clear his mind.</p>
+								</li>
+								<li>
+									<div class="img-holder sixth">
+										<img src="images/rafek.png" alt="Rafał Legiędź">
+									</div>
+									<span class="name">Rafał Legiędź</span>
+									<span class="position">Happy Developer</span>
+									<p>A firm believer that being pragmatic in software development can make a big difference. Jack of all trades and master of none. Will code at 4 AM because he can.</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+                <section class="values">
+					<div class="holder">
+						<div class="values-text">
+							<h2>Our Values</h2>
+							<span class="orange">What we believe in</span>
+							<p>Our values define who we are. They are the fundamental beliefs of our team. They influence the way we work with each other, serve our customers and engage with communities.</p>
+						</div>
+						<ul>
+							<li>
+								<div class="img-holder">
+									<img src="images/ico20.png" alt="image description">
+								</div>
+								<p>Caring</p>
+							</li>
+							<li>
+								<div class="img-holder">
+									<img src="images/ico21.png" alt="image description">
+								</div>
+								<p>Knowledge Sharing</p>
+							</li>
+							<li>
+								<div class="img-holder">
+									<img src="images/ico22.png" alt="image description">
+								</div>
+								<p>Passion</p>
+							</li>
+							<li>
+								<div class="img-holder">
+									<img src="images/ico23.png" alt="image description">
+								</div>
+								<p>Fun</p>
+							</li>
+							<li>
+								<div class="img-holder">
+									<img src="images/ico24.png" alt="image description">
+								</div>
+								<p>Excellence</p>
+							</li>
+						</ul>
+					</div>
+				</section>
+                <section class="news">
+					<div class="holder">
+						<h2>What's new?</h2>
+						<span class="orange">Our Blog</span>
+						<div class="four-articles">
+                            {{ range first 10 .Data.Pages }}
+                                {{ if eq .Type "post"}}
+                                    <article class="blog">
+								        <img src="images/img1-news.jpg" alt="image description">
+								        <h3>{{ .Title }}</h3>
+                                        <span class="author">{{ .Params.author }}</span>
+                                        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+                                        <p>{{ .Summary }}</p>
+                                        <a href="{{ .Permalink }}">read more</a>
+							        </article>
+                                {{ end }}
+                            {{ end }}
+						</div>
+						<a href="#" class="btn">See All</a>
+					</div>
+				</section>
+			</main>
+			<footer id="footer">
+				<div class="holder">
+                    <a class="anchor" name="contact"></a>
+					<div class="contact-us">
+						<h4>Contact us</h4>
+						<ul>
+							<!-- <li>
+								<span class="ico-holder"><i class="fa fa-phone"></i></span>
+								<div class="text-holder">
+									<a href="tel:426534678">42 653-46-78</a>
+								</div>
+							</li>-->
+							<li>
+								<span class="ico-holder"><i class="fa fa-map-marker"></i></span>
+								<div class="text-holder">
+									<address>
+                                        1 Maja 29/5<br>
+                                        90-739 Łódź<br>
+                                        Poland
+                                    </address>
+								</div>
+							</li>
+							<li>
+								<span class="ico-holder"><i class="fa fa-envelope"></i></span>
+								<div class="text-holder">
+									<a href="mailto:&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64;&#104;&#97;&#112;&#112;&#121;&#116;&#101;&#97;&#109;&#46;&#105;&#111;">&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64;&#104;&#97;&#112;&#112;&#121;&#116;&#101;&#97;&#109;&#46;&#105;&#111;</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="social-media">
+						<h4>Social media</h4>
+						<ul>
+							<li><a href="http://twitter.com/happyteamio"><i class="fa fa-twitter"></i></a></li>
+							<!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
+							<li><a href="https://www.linkedin.com/company/happy-team-sp--z-o-o-"><i class="fa fa-linkedin"></i></a></li>
+							<!-- <li><a href="#"><i class="fa fa-rss"></i></a></li> -->
+						</ul>
+					</div>
+                    <div class="contact-form">
+						<h4>Write to us</h4>
+						<form action="https://formspree.io/contact@happyteam.io" method="POST">
+							<div class="row">
+								<input name="name" type="text" placeholder="name">
+							</div>
+							<div class="row">
+								<input name="email" type="email" placeholder="email">
+							</div>
+							<div class="row">
+								<input name="phone" type="tel" placeholder="phone">
+							</div>
+							<div class="row">
+								<textarea name="inquiry" cols="18" rows="2" placeholder="inquiry"></textarea>
+							</div>
+							<div class="row">
+								<input name="send" type="submit" value="Send message">
+							</div>
+						</form>
+					</div>
+                    <div style="font-size: 10px; text-align: center; margin-top: 20px;">
+                         <span style="margin: 0 10px;">KRS: 0000570355</span>
+                         <span style="margin: 0 10px;">NIP: 7272797039</span>
+                         <span style="margin: 0 10px;">Regon: 362194274</span>
+                    </div>
+                </div>
+			</footer>
+		</div>
+	</div>
 {{ partial "footer.html" . }}
