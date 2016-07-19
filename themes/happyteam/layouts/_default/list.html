@@ -1,0 +1,55 @@
+{{ partial "html_header.html" . }}
+
+	<div id="wrapper">
+		<div class="w1">
+			{{ partial "page_header.html" . }}
+			{{ partial "promo_box.html" . }}
+			<main id="main" role="main">
+				<div class="inner">
+					<div class="holder">
+						<div class="blog-content">
+							{{ range .Paginator.Pages }}
+							<article class="blog-section">
+								<h2>{{ .Title }}</h2>
+								<span class="author">{{ .Params.author }}</span>
+								<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+								<img src="/images/img1-blog.jpg" alt="image description">
+								<p>{{ .Description }}</p>
+								<a href="{{ .Permalink }}" class="btn">read more</a>
+							</article>
+							{{ end }}
+
+
+						</div>
+						<aside class="sidebar">
+							{{ partial "recent_posts_sidebar.html" . }}
+						</aside>
+
+						{{ $pag := .Paginator }}
+						{{ if gt $pag.TotalPages 1 }}
+						<ul class="paging">
+							{{ if $pag.HasPrev }}
+						    <li class="prev"><a href="{{ $pag.Prev.URL }}"><i class="fa fa-angle-double-left"></i> <span class="hide">previous</span></a></li>
+							{{ end }}
+
+							{{ range $pag.Pagers }}
+								{{ if eq .PageNumber $pag.PageNumber }}
+						    		<li><span class="active">{{ .PageNumber }}</span></li>
+								{{ else }}
+								    <li><a href="{{ .URL }}">{{ .PageNumber }}</a></li>
+								{{ end }}
+							{{ end }}
+
+							{{ if $pag.HasNext }}
+						    <li class="next"><a href="{{ $pag.Next.URL }}"><span class="hide">next</span> <i class="fa fa-angle-double-right"></i></a></li>
+							{{ end }}
+						</ul>
+						{{ end }}
+
+					</div>
+				</div>
+			</main>
+		</div>
+		{{ partial "page_footer.html" . }}	
+	</div>
+{{ partial "html_footer.html" . }}

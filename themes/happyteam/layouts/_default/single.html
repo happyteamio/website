@@ -14,22 +14,7 @@
 
 						</div>
 						<aside class="sidebar">
-							<div class="recent">
-								<h3>Recent Posts</h3>
-                                {{ range first 4 .Site.Pages }}
-                                    {{ if eq .Type "post"}}
-                                        <div class="post">
-                                            <div class="img-holder">
-                                                <a href="{{ .Permalink }}"><img src="/images/img7-blog.jpg" alt="image description"></a>
-                                            </div>
-                                            <div class="post-text">
-                                                <h4><a href="#">{{ .Title }}</a></h4>
-                                                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-                                            </div>	
-                                        </div>
-                                    {{ end }}
-                                {{ end }}	
-							</div>
+							{{ partial "recent_posts_sidebar.html" . }}
 						</aside>
 					</div>
 				</div>
