@@ -1,39 +1,9 @@
-{{ partial "header.html" . }}
+{{ partial "html_header.html" . }}
 
 	<div id="wrapper">
 		<div class="w1">
-			<header id="header">
-				<div class="holder">
-					<div class="logo">
-						<a href="#">
-							<img src="images/logo.png" height="39" width="262" alt="HappyTeam">
-						</a>
-					</div>
-					<nav class="nav">
-						<a href="#" class="nav-opener"><span>Menu</span></a>
-						<div class="drop">
-							<ul>
-								<li><a href="#">Home</a></li>
-								<li><a href="#solutions">Solutions</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#team">Team</a></li>
-                                <li><a href="#contact">Contact</a></li>
-							</ul>
-						</div>
-					</nav>
-				</div>
-			</header>
-			<div class="promo">
-				<div class="holder">
-					<img src="images/bg-promo.png" height="463" width="1142" alt="image description">
-					<div class="promo-holder">
-						<h1>Happy Team <br><img src="images/ico1.png" alt="image description"> Happy Client<span>.</span></h1>
-						<div class="box-text">
-							<p>Software Solutions <span class="orange">for your company</span></p>
-						</div>
-					</div>
-				</div>
-			</div>
+			{{ partial "page_header.html" . }}
+			{{ partial "promo_box.html" . }}
 			<main id="main" role="main">
 				<section class="intro">
                     <a class="anchor" name="solutions"></a>
@@ -275,14 +245,14 @@
 						<h2>What's new?</h2>
 						<span class="orange">Our Blog</span>
 						<div class="four-articles">
-                            {{ range first 10 .Data.Pages }}
+                            {{ range first 4 .Data.Pages }}
                                 {{ if eq .Type "post"}}
                                     <article class="blog">
 								        <img src="images/img1-news.jpg" alt="image description">
 								        <h3>{{ .Title }}</h3>
                                         <span class="author">{{ .Params.author }}</span>
                                         <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-                                        <p>{{ .Summary }}</p>
+                                        <p>{{ .Description }}</p>
                                         <a href="{{ .Permalink }}">read more</a>
 							        </article>
                                 {{ end }}
@@ -292,72 +262,7 @@
 					</div>
 				</section>
 			</main>
-			<footer id="footer">
-				<div class="holder">
-                    <a class="anchor" name="contact"></a>
-					<div class="contact-us">
-						<h4>Contact us</h4>
-						<ul>
-							<!-- <li>
-								<span class="ico-holder"><i class="fa fa-phone"></i></span>
-								<div class="text-holder">
-									<a href="tel:426534678">42 653-46-78</a>
-								</div>
-							</li>-->
-							<li>
-								<span class="ico-holder"><i class="fa fa-map-marker"></i></span>
-								<div class="text-holder">
-									<address>
-                                        1 Maja 29/5<br>
-                                        90-739 Łódź<br>
-                                        Poland
-                                    </address>
-								</div>
-							</li>
-							<li>
-								<span class="ico-holder"><i class="fa fa-envelope"></i></span>
-								<div class="text-holder">
-									<a href="mailto:&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64;&#104;&#97;&#112;&#112;&#121;&#116;&#101;&#97;&#109;&#46;&#105;&#111;">&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64;&#104;&#97;&#112;&#112;&#121;&#116;&#101;&#97;&#109;&#46;&#105;&#111;</a>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="social-media">
-						<h4>Social media</h4>
-						<ul>
-							<li><a href="http://twitter.com/happyteamio"><i class="fa fa-twitter"></i></a></li>
-							<!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
-							<li><a href="https://www.linkedin.com/company/happy-team-sp--z-o-o-"><i class="fa fa-linkedin"></i></a></li>
-							<!-- <li><a href="#"><i class="fa fa-rss"></i></a></li> -->
-						</ul>
-					</div>
-                    <div class="contact-form">
-						<h4>Write to us</h4>
-						<form action="https://formspree.io/contact@happyteam.io" method="POST">
-							<div class="row">
-								<input name="name" type="text" placeholder="name">
-							</div>
-							<div class="row">
-								<input name="email" type="email" placeholder="email">
-							</div>
-							<div class="row">
-								<input name="phone" type="tel" placeholder="phone">
-							</div>
-							<div class="row">
-								<textarea name="inquiry" cols="18" rows="2" placeholder="inquiry"></textarea>
-							</div>
-							<div class="row">
-								<input name="send" type="submit" value="Send message">
-							</div>
-						</form>
-					</div>
-                    <div style="font-size: 10px; text-align: center; margin-top: 20px;">
-                         <span style="margin: 0 10px;">KRS: 0000570355</span>
-                         <span style="margin: 0 10px;">NIP: 7272797039</span>
-                         <span style="margin: 0 10px;">Regon: 362194274</span>
-                    </div>
-                </div>
-			</footer>
 		</div>
+		{{ partial "page_footer.html" . }}	
 	</div>
-{{ partial "footer.html" . }}
+{{ partial "html_footer.html" . }}

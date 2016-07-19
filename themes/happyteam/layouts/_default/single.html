@@ -1,6 +1,40 @@
-{{ partial "header.html" . }}
+{{ partial "html_header.html" . }}
 
-<h1>{{ .Title }}</h1>
-{{ .Content }}
+	<div id="wrapper">
+		<div class="w1">
+			{{ partial "page_header.html" . }}
+			{{ partial "promo_box.html" . }}
 
-{{ partial "footer.html" . }}
+            <main id="main" role="main">
+				<div class="inner">
+					<div class="holder">
+						<div class="blog-content">
+							<h1>{{ .Title }}</h1>
+                            {{ .Content }}
+
+						</div>
+						<aside class="sidebar">
+							<div class="recent">
+								<h3>Recent Posts</h3>
+                                {{ range first 4 .Site.Pages }}
+                                    {{ if eq .Type "post"}}
+                                        <div class="post">
+                                            <div class="img-holder">
+                                                <a href="{{ .Permalink }}"><img src="/images/img7-blog.jpg" alt="image description"></a>
+                                            </div>
+                                            <div class="post-text">
+                                                <h4><a href="#">{{ .Title }}</a></h4>
+                                                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+                                            </div>	
+                                        </div>
+                                    {{ end }}
+                                {{ end }}	
+							</div>
+						</aside>
+					</div>
+				</div>
+			</main>
+		</div>
+		{{ partial "page_footer.html" . }}	
+	</div>
+{{ partial "html_footer.html" . }}
