@@ -133,7 +133,7 @@ function initMobileNav() {
 			};
 
 			this.openerClickHandler = function(e) {
-				e.preventDefault();
+				//e.preventDefault();
 				self.toggle();
 			};
 			
