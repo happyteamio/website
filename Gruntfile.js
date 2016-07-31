@@ -1,8 +1,7 @@
 module.exports = function(grunt) {
-
   require('load-grunt-tasks')(grunt);
 
-var PathConfig = require('./grunt-settings.js');
+  var PathConfig = require('./grunt-settings.js');
 
   // tasks
   grunt.initConfig({
@@ -130,35 +129,6 @@ var PathConfig = require('./grunt-settings.js');
       }
     },
 
-    //watcher project
-    watch: {
-      options: {
-        debounceDelay: 1,
-        // livereload: true,
-      },
-      images: {
-        files: ['<%= config.imgSourceDir %>**/*.*'],
-        tasks: [/*'img:jpg', 'newer:pngmin:all', 'newer:svgmin'*/ 'newer:copy:images'],
-        options: {
-            spawn: false
-        }
-      },
-      svgSprites: {
-        files: ['<%= config.imgSourceDir %>svg-icons/*.*'],
-        tasks: ['svgstore', 'svg2string'],
-        options: {
-            spawn: false
-        }
-      },
-      css: {
-        files: ['<%= config.sassDir %>**/*.scss'],
-        tasks: ['sass:dev', 'postcss:dev'],
-        options: {
-            spawn: false,
-        }
-      }
-    },
-
     copy: {
       images: {
         expand: true,
@@ -252,37 +222,6 @@ var PathConfig = require('./grunt-settings.js');
       },
     },
 
-    //Keep multiple browsers & devices in sync when building websites.
-    browserSync: {
-      dev: {
-        bsFiles: {
-          src : ['*.html','<%= config.cssDir %>*.css', '*.css']
-        },
-        options: {
-          server: {
-            baseDir: "../",
-            index: "index.html",
-            directory: true
-          },
-          watchTask: true
-        }
-      }
-    },
-
-    notify: {
-      options: {
-        enabled: true,
-        max_js_hint_notifications: 5,
-        title: "WP project"
-      },
-      watch: {
-        options: {
-          title: 'Task Complete',  // optional
-          message: 'SASS finished running', //required
-        }
-      },
-    }, 
-
     //copy files
     // copy: {
     //   dist: {
@@ -344,6 +283,18 @@ var PathConfig = require('./grunt-settings.js');
       }
     },
 
+    cssmin: {
+        target: {
+          files: [{
+            expand: true,
+            cwd: '<%= config.cssMainFileDir %>',
+            src: ['*.css', '!*.min.css'],
+            dest: '<%= config.cssMainFileDir %>',
+            ext: '.min.css'
+          }]
+        }
+      },
+
     'sftp-deploy': {
       build: {
         auth: {
@@ -368,25 +319,17 @@ var PathConfig = require('./grunt-settings.js');
 
 // run task
 //dev 
-  //watch
-  grunt.registerTask('w', ['watch']);
-  //browser sync
-  grunt.registerTask('bs', ['browserSync']);
-
-  //watch + browser sync
-  grunt.registerTask('dev', ['browserSync', 'watch']);
-
   //create svg sprite
   grunt.registerTask('svgsprite', ['svgmin', 'svgstore', 'svg2string']);
   
-  grunt.registerTask('default', ['dev']);
+  grunt.registerTask('default', ['dist']);
 
   // upload to server
   grunt.registerTask('sftp', ['sftp-deploy']);
 
 //finally 
   //css beautiful
-  grunt.registerTask('cssbeauty', ['sass:dist', 'cmq:dist', 'postcss:dist', 'csscomb:dist']);
+  grunt.registerTask('cssbeauty', ['sass:dist', 'cmq:dist', 'postcss:dist', 'csscomb:dist', 'cssmin']);
   //img minify
   grunt.registerTask('imgmin', ['imagemin', 'pngmin:all', 'svgmin']);
 

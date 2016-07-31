@@ -1,12 +1,12 @@
 module.exports = {
-    sassDir:          'scss/',
+    sassDir:          'themes/happyteam/scss/',
     sassMainFileName: 'main',
-    cssDir:           'css/',
-    cssMainFileDir:   'css/',
+    cssDir:           'themes/happyteam/static/css/',
+    cssMainFileDir:   'themes/happyteam/static/css/',
     cssMainFileName:  'main',
-    jsDir:            'js/',
-    imgDir:           'images/',
-    imgSourceDir:     'sourceimages/',
+    jsDir:            'public/js/',
+    imgDir:           'themes/happyteam/static/images/',
+    imgSourceDir:     'themes/happyteam/sourceimages/',
     //hasBower: {includePaths: ['bower_components/foundation/scss']},
 
     // sftp server

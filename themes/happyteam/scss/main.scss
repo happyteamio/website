@@ -517,7 +517,7 @@ a {
     padding:10px;
     color:$gray;
     margin: 0 -8px;
-    @extend %transition;
+    transition: all 0.3s ease-in-out;
     &:hover{
       background:$gray;
       color:$color-primary;
@@ -527,7 +527,7 @@ a {
       vertical-align: middle;
       font-size: 19px;
       line-height:19px;
-      @extend %transition;
+      transition: all 0.3s ease-in-out;
       .active &{
         transform:rotate(-180deg);
       }
@@ -1211,7 +1211,11 @@ a {
     font-size: 16px;
     @include media('<tablet') {
       width: 100%;
-      @extend %clearfix;
+      &:after { // fix clearfix scope problem by just coping
+        content: '';
+        display: block;
+        clear: both;
+      }
       margin-bottom:0px;
     }
   }

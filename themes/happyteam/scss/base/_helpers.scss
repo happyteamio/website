@@ -18,11 +18,10 @@
   @extend %clearfix;
 }
 
-
 // transition
 %transition {
  transition: all 0.3s ease-in-out;
-}
+} // see copy in main.css lines: 520, 530 
 
 // justify nav
 %justify {
