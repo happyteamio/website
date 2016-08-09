@@ -529,7 +529,7 @@ h6,
 
 h1,
 .h1 {
-	font-size: 52px;
+	font-size: 44px;
 	color: #525252;
 }
 
@@ -1604,8 +1604,11 @@ a.anchor {
 	margin: 0 0 9px;
 }
 
+.blog-content p {
+	line-height: 1.6;
+}
+
 .blog-section {
-	line-height: 27px;
 	margin-bottom: 65px;
 }
 

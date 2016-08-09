@@ -257,7 +257,7 @@
                                 {{ if eq .Type "post"}}
                                     <article class="blog">
 								        <img src="images/img1-news.jpg" alt="image description">
-								        <h3>{{ .Title }}</h3>
+								        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
                                         <span class="author">{{ .Params.author }}</span>
                                         <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
                                         <p>{{ .Description }}</p>
