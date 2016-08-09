@@ -6,42 +6,17 @@ module.exports = function(grunt) {
   // tasks
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-
     config: PathConfig,
-
     //clean files
     clean: {
       options: { force: true },
       temp: {
-        src: ["<%= config.cssDir %>**/*.map", "<%= config.imgDir %>", "<%= config.cssMainFileDir %><%= config.cssMainFileName %>.css.map", "./jpgtmp.jpg"]
+        src: ["<%= config.cssDir %>**/*.map",
+              "<%= config.imgDir %>",
+              "<%= config.cssMainFileDir %><%= config.cssMainFileName %>.css.map",
+              "./jpgtmp.jpg"]
       }
     },
-
-    // autoprefixer
-    // autoprefixer: {
-    //   options: {
-    //     browsers: ['last 4 version', 'Android 4', 'ie 8', 'ie 9']
-    //   },
-
-    //   multiple_files: {
-    //     options: {
-    //         map: true
-    //     },
-    //     expand: true,
-    //     flatten: true,
-    //     src: ['<%= config.cssDir %>*.css', '<%= config.cssMainFileDir %><%= config.cssMainFileName %>.css']
-    //   },
-
-    //   dist: {
-    //     src: ['<%= config.cssDir %>*.css', 
-    //           '<%= config.cssMainFileDir %><%= config.cssMainFileName %>.css',
-    //           '!<%= config.cssDir %>bootstrap.css',
-    //           '!<%= config.cssDir %>bootstrap.min.css',
-    //           '!<%= config.cssDir %>ie.css',
-    //           '!<%= config.cssDir %>ie8.css'
-    //           ]
-    //   },
-    // },
 
     postcss: {
       dev: {
@@ -53,10 +28,6 @@ module.exports = function(grunt) {
         },
         src: ['<%= config.cssDir %>*.css',
               '<%= config.cssMainFileDir %><%= config.cssMainFileName %>.css',
-              '!<%= config.cssDir %>bootstrap.css',
-              '!<%= config.cssDir %>bootstrap.min.css',
-              '!<%= config.cssDir %>ie.css',
-              '!<%= config.cssDir %>ie8.css'
               ]
       },
       dist: {
@@ -68,10 +39,6 @@ module.exports = function(grunt) {
         },
         src: ['<%= config.cssDir %>*.css',
               '<%= config.cssMainFileDir %><%= config.cssMainFileName %>.css',
-              '!<%= config.cssDir %>bootstrap.css',
-              '!<%= config.cssDir %>bootstrap.min.css',
-              '!<%= config.cssDir %>ie.css',
-              '!<%= config.cssDir %>ie8.css'
               ]
       }
     },
@@ -92,7 +59,10 @@ module.exports = function(grunt) {
             dest: '<%= config.cssDir %>',
             ext: '.css'
           },
-          {src: '<%= config.sassDir %><%= config.sassMainFileName %>.scss', dest: '<%= config.cssMainFileDir %><%= config.cssMainFileName %>.css'}
+          {
+            src: '<%= config.sassDir %><%= config.sassMainFileName %>.scss',
+            dest: '<%= config.cssMainFileDir %><%= config.cssMainFileName %>.css'
+          }
         ]
       },
       dist: {
@@ -108,35 +78,11 @@ module.exports = function(grunt) {
             dest: '<%= config.cssDir %>',
             ext: '.css'
           },
-          {src: '<%= config.sassDir %><%= config.sassMainFileName %>.scss', dest: '<%= config.cssMainFileDir %><%= config.cssMainFileName %>.css'}
-        ]
-      },
-      min: {
-        options: {
-          sourceMap: false,
-          outputStyle: 'compressed'
-        },
-        files: [
           {
-            expand: true,
-            cwd: '<%= config.sassDir %>',
-            src: ['**/*.scss', '!<%= config.sassMainFileName %>.scss'],
-            dest: '<%= config.cssDir %>',
-            ext: '.min.css'
-          },
-          {src: '<%= config.sassDir %><%= config.sassMainFileName %>.scss', dest: '<%= config.cssMainFileDir %><%= config.cssMainFileName %>.min.css'}
+            src: '<%= config.sassDir %><%= config.sassMainFileName %>.scss', 
+            dest: '<%= config.cssMainFileDir %><%= config.cssMainFileName %>.css'
+          }
         ]
-      }
-    },
-
-    copy: {
-      images: {
-        expand: true,
-        cwd: '<%= config.imgSourceDir %>',
-        src: '**',
-        dest: '<%= config.imgDir %>',
-        //flatten: true,
-        filter: 'isFile',
       }
     },
 
@@ -148,59 +94,6 @@ module.exports = function(grunt) {
           src: ['**/*.{jpg,gif}'],   
           dest: '<%= config.imgDir %>'                  
         }]
-      }
-    },
-
-    svgmin: {
-      options: {
-       plugins: [
-         {
-             removeViewBox: false
-         }, {
-             removeUselessStrokeAndFill: false
-         }
-       ]
-      },
-      dist: {
-       files: [
-          {
-            expand: true,
-            src: ['**/*.svg'],
-            cwd: '<%= config.imgSourceDir %>',
-            dest: '<%= config.imgDir %>'
-          }
-        ]
-      }
-    },
-
-    svgstore: {
-      options: {
-        prefix : 'icon-', // This will prefix each ID
-        svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
-          viewBox : '0 0 100 100',
-          xmlns: 'http://www.w3.org/2000/svg'
-        },
-        cleanup: ['fill']
-      },
-      your_target: {
-        files: {
-          '<%= config.imgDir %>svg-sprites/sprite.svg': ['<%= config.imgDir %>svg-icons/*.svg'],
-        },
-      },
-    },
-
-    svg2string: {
-      elements: {
-        options: {
-          template: '(window.SVG_SPRITES = window.SVG_SPRITES || {})["[%= filename %]"] = [%= content %];',
-          wrapLines: false
-        },
-        files: {
-          '<%= config.jsDir %>svg-sprites.js': [
-            // '<%= config.imgDir %>sprite.svg',
-            '<%= config.imgDir %>svg-sprites/sprite.svg'
-          ]
-        }
       }
     },
 
@@ -222,35 +115,11 @@ module.exports = function(grunt) {
       },
     },
 
-    //copy files
-    // copy: {
-    //   dist: {
-    //     files: [
-    //       {
-    //         expand: true,
-    //         dot: true,
-    //         cwd: './',
-    //         src: [
-    //           '**',
-
-    //           '!scss/**',
-    //           '!**/**/.svn/**',
-    //           '!css/**',
-    //         ],
-    //         dest: '<%= config.distDir %>'
-    //       } 
-    //     ]
-    //   },
-    // },
-
     csscomb: {
       all: {
         expand: true,
         src: ['<%= config.cssDir %>*.css', 
               '<%= config.cssMainFileDir %><%= config.cssMainFileName %>.css',
-              '!<%= config.cssDir %>bootstrap.css',
-              '!<%= config.cssDir %>ie.css',
-              '!<%= config.cssDir %>ie8.css'
               ],
         ext: '.css'
       },
@@ -294,48 +163,18 @@ module.exports = function(grunt) {
           }]
         }
       },
-
-    'sftp-deploy': {
-      build: {
-        auth: {
-          host: '<%= config.sftpServer %>',
-          port: '<%= config.sftpPort %>',
-          authKey: {
-                    "username": "<%= config.sftpLogin %>",
-                    "password": "<%= config.sftpPas %>"
-                  }
-        },
-        cache: 'sftpCache.json',
-        src: 'css',
-        dest: '<%= config.sftpDestination %>',
-        //exclusions: ['/path/to/source/folder/**/.DS_Store', '/path/to/source/folder/**/Thumbs.db', 'dist/tmp'],
-        serverSep: '/',
-        concurrency: 4,
-        progress: true
-      }
-    }
-
   });
 
 // run task
-//dev 
-  //create svg sprite
-  grunt.registerTask('svgsprite', ['svgmin', 'svgstore', 'svg2string']);
-  
   grunt.registerTask('default', ['dist']);
-
-  // upload to server
-  grunt.registerTask('sftp', ['sftp-deploy']);
 
 //finally 
   //css beautiful
   grunt.registerTask('cssbeauty', ['sass:dist', 'cmq:dist', 'postcss:dist', 'csscomb:dist', 'cssmin']);
   //img minify
-  grunt.registerTask('imgmin', ['imagemin', 'pngmin:all', 'svgmin']);
-
+  grunt.registerTask('imgmin', ['imagemin', 'pngmin:all']);
   //final build
   grunt.registerTask('dist', ['clean:temp', 'imgmin', 'cssbeauty']);
-
 };
 
 
