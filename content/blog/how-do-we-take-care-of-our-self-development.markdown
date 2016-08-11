@@ -1,9 +1,9 @@
 ---
-layout: post
 title: 	"How do we take care of our self-development"
 date: 	2016-08-10
 description: "We are very much dedicated to our self-development at Happy Team. Being a consultancy company means we care about constantly learning and improving. Therefore we dedicate our own time to such activities. But how do we do it?"
 author: "mihcall"
+type: post
 ---
 
 We are very much dedicated to our self-development at Happy Team. Being a consultancy company means we care about learning and improving constantly. Therefore we dedicate our own time to such activities.

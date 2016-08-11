@@ -3,6 +3,9 @@ languageCode = "en-us"
 theme = "happyteam"
 title = "HappyTeam"
 
+[permalinks]
+    blog    = "/blog/:year/:month/:day/:title/"
+
 [params]
     [params.authors]
         [params.authors.mihcall]
