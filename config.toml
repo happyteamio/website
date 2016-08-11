@@ -2,3 +2,10 @@ baseurl = "http://beta.happyteam.io/"
 languageCode = "en-us"
 theme = "happyteam"
 title = "HappyTeam"
+
+[params]
+    [params.authors]
+        [params.authors.mihcall]
+            image			= "/images/mihcall.png"
+            fullname        = "Michał Śliwoń"
+            bio				= "Michał is a passionate software developer touching everything from C# to Javascript frameworks, not afraid of F# and Objective-C. He loves meetups and conferences."

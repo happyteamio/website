@@ -1558,3 +1558,28 @@ a {
     font-size: 50px;
     color: #484848;
 }
+
+.author-box {
+  &.team-text {
+    margin: 30px 0;
+  }
+
+  .img-holder {
+    float: left;
+    height: 100px;
+    img {
+      height: 100px;
+    }
+    @include media('<tablet') {
+      display: inline-block;
+    }
+  }
+
+  .data {
+    margin-left: 120px;
+    .bio {
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+}

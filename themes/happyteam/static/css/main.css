@@ -1769,6 +1769,28 @@ a.anchor {
 	color: #484848;
 }
 
+.author-box.team-text {
+	margin: 30px 0;
+}
+
+.author-box .img-holder {
+	float: left;
+	height: 100px;
+}
+
+.author-box .img-holder img {
+	height: 100px;
+}
+
+.author-box .data {
+	margin-left: 120px;
+}
+
+.author-box .data .bio {
+	font-size: 15px;
+	line-height: 20px;
+}
+
 @media (min-width: 768px) {
 	.slide.js-slide-hidden {
 		display: block !important;
@@ -2465,6 +2487,10 @@ a.anchor {
 	.paging .next a,
 	.paging .prev a {
 		padding: 8px 11px;
+	}
+
+	.author-box .img-holder {
+		display: inline-block;
 	}
 }
 
