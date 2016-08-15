@@ -246,6 +246,10 @@ a {
     @include media('<tablet') {
       max-width:1220px;
     }
+    &.short {
+      height: 150px;
+      overflow: hidden;
+    }
     >img{
       display: block;
       @include media('<tablet') {
@@ -253,7 +257,6 @@ a {
         width: auto;
         margin-top:60px;
         display: inline-block;
-        //margin-left:-80px;
       }
     }
   }

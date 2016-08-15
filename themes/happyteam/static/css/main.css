@@ -819,6 +819,11 @@ a.anchor {
 	margin: 0 auto;
 }
 
+.promo .holder.short {
+	height: 150px;
+	overflow: hidden;
+}
+
 .promo .holder > img {
 	display: block;
 }
