@@ -1745,18 +1745,24 @@ a.anchor {
 
 .post-text {
 	overflow: hidden;
+	float: left;
 }
 
 .post-text h4 {
 	font-size: 14px;
 	line-height: 14px;
 	font-weight: 600;
-	margin: 0;
+	margin: 0 0 10px 0;
 }
 
-.post-text time {
+.post-text time,
+.post-text .author {
 	font-size: 12px;
 	line-height: 12px;
+}
+
+.post-text .author {
+	text-transform: uppercase;
 }
 
 .popular,
@@ -1770,7 +1776,7 @@ a.anchor {
 }
 
 .author-box.team-text {
-	margin: 30px 0;
+	margin: 40px 0;
 }
 
 .author-box .img-holder {

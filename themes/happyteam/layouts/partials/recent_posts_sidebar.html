@@ -2,12 +2,14 @@
     <h3>Recent Posts</h3>
     {{ range first 4 .Site.Pages }}
         {{ if eq .Type "post"}}
+            {{ $author := index .Site.Params.authors .Params.author }}
             <div class="post">
                 <div class="img-holder">
-                    <a href="{{ .Permalink }}"><img src="/images/img7-blog.jpg" alt="image description"></a>
+                    <a href="{{ .Permalink }}"><img src="{{ .Params.cover }}" alt="{{ .Title }}"></a>
                 </div>
                 <div class="post-text">
                     <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+                    <div class="author">{{ $author.fullname }}</div>
                     <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
                 </div>	
             </div>

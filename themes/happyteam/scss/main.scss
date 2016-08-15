@@ -8,9 +8,7 @@
          url('../fonts/faraco_hand-webfont.svg#faraco_handregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
-
 
 $breakpoints: (
   'xs-phone': 320px,
@@ -1528,15 +1526,19 @@ a {
 }
 .post-text{
   overflow: hidden;
+  float: left;
   h4{
     font-size: 14px;
     line-height: 14px;
     font-weight: 600;
-    margin: 0;
+    margin: 0 0 10px 0;
   }
-  time{
+  time,.author{
     font-size: 12px;
     line-height: 12px;
+  }
+  .author {
+    text-transform: uppercase;
   }
 }
 .popular,
@@ -1561,7 +1563,7 @@ a {
 
 .author-box {
   &.team-text {
-    margin: 30px 0;
+    margin: 40px 0;
   }
 
   .img-holder {

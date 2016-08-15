@@ -9,11 +9,12 @@
 					<div class="holder">
 						<div class="blog-content">
 							{{ range .Paginator.Pages }}
+							{{ $author := index .Site.Params.authors .Params.author }}
 							<article class="blog-section">
 								<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-								<span class="author">{{ .Params.author }}</span>
+								<span class="author">{{ $author.fullname }}</span>
 								<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-								<img src="/images/img1-blog.jpg" alt="image description">
+								<img src="{{ .Params.cover }}" alt="{{ .Title }}">
 								<p>{{ .Description }}</p>
 								<a href="{{ .Permalink }}" class="btn">read more</a>
 							</article>
