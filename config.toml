@@ -1,4 +1,4 @@
-baseurl = "http://beta.happyteam.io/"
+baseurl = "http://happyteam.io/"
 languageCode = "en-us"
 theme = "happyteam"
 title = "HappyTeam"
