@@ -2071,6 +2071,10 @@ a.anchor {
 		max-width: 1220px;
 	}
 
+	.promo .holder.short {
+		height: auto;
+	}
+
 	.promo .holder > img {
 		height: 250px;
 		width: auto;

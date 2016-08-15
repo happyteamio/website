@@ -249,6 +249,9 @@ a {
     &.short {
       height: 150px;
       overflow: hidden;
+      @include media('<tablet') {
+        height: auto;
+      }
     }
     >img{
       display: block;
