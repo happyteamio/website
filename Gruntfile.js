@@ -12,9 +12,7 @@ module.exports = function(grunt) {
       options: { force: true },
       temp: {
         src: ["<%= config.cssDir %>**/*.map",
-              "<%= config.imgDir %>",
-              "<%= config.cssMainFileDir %><%= config.cssMainFileName %>.css.map",
-              "./jpgtmp.jpg"]
+              "<%= config.cssMainFileDir %><%= config.cssMainFileName %>.css.map"]
       }
     },
 
@@ -86,35 +84,6 @@ module.exports = function(grunt) {
       }
     },
 
-    imagemin: {                          
-      dynamic: {                         
-        files: [{
-          expand: true,                  
-          cwd: '<%= config.imgSourceDir %>',                   
-          src: ['**/*.{jpg,gif}'],   
-          dest: '<%= config.imgDir %>'                  
-        }]
-      }
-    },
-
-    // lossy image optimizing (compress png images with pngquant)
-    pngmin: {
-      all: {
-        options: {
-          ext: '.png',
-          force: true
-        },
-        files: [
-          {
-            expand: true,
-            src: ['**/*.png'],
-            cwd: '<%= config.imgSourceDir %>',
-            dest: '<%= config.imgDir %>'
-          }
-        ]
-      },
-    },
-
     csscomb: {
       all: {
         expand: true,
@@ -171,10 +140,8 @@ module.exports = function(grunt) {
 //finally 
   //css beautiful
   grunt.registerTask('cssbeauty', ['sass:dist', 'cmq:dist', 'postcss:dist', 'csscomb:dist', 'cssmin']);
-  //img minify
-  grunt.registerTask('imgmin', ['imagemin', 'pngmin:all']);
   //final build
-  grunt.registerTask('dist', ['clean:temp', 'imgmin', 'cssbeauty']);
+  grunt.registerTask('dist', ['clean:temp', 'cssbeauty']);
 };
 
 
