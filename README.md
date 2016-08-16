@@ -6,5 +6,5 @@
 1. Open terminal/command line in a main folder of repository
 1. Assuming you want to create a post titled "Awesome post" run:
 `hugo new blog/awesome-post.md`
-1. Fill `blog/awesome-post.md` file with content in markdown
+1. Fill `content/blog/awesome-post.md` file with content in markdown
 1. Commit when done
