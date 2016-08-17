@@ -132,13 +132,34 @@ module.exports = function(grunt) {
           }]
         }
       },
+
+  concat: {
+      options: {
+        separator: ';'
+      },
+      dist: {
+        src: ['themes/happyteam/src/js/jquery.main.js', 'themes/happyteam/src/js/document.js'],
+        dest: 'themes/happyteam/static/js/jsbundle.js'
+      }
+    },
+
+  uglify: {
+    options: {
+      banner: '/*! jsbundle <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+    },
+    dist: {
+      files: {
+        'themes/happyteam/static/js/jsbundle.min.js': ['<%= concat.dist.dest %>']
+      }
+    }
+  }
+
   });
 
 // run task
   grunt.registerTask('default', ['dist']);
 
-//finally 
-  //css beautiful
+  grunt.registerTask('jsbundle', ['concat', 'uglify']);
   grunt.registerTask('cssbeauty', ['sass:dist', 'cmq:dist', 'postcss:dist', 'csscomb:dist', 'cssmin']);
   //final build
   grunt.registerTask('dist', ['clean:temp', 'cssbeauty']);

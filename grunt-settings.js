@@ -3,6 +3,5 @@ module.exports = {
     sassMainFileName: 'main',
     cssDir:           'themes/happyteam/static/css/',
     cssMainFileDir:   'themes/happyteam/static/css/',
-    cssMainFileName:  'main',
-    jsDir:            'public/js/'
+    cssMainFileName:  'main'
   };
