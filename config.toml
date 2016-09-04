@@ -3,6 +3,7 @@ languageCode = "en-us"
 theme = "happyteam"
 title = "HappyTeam"
 googleAnalytics = "UA-77252115-1"
+metaDataFormat = "yaml"
 
 [permalinks]
     blog    = "/blog/:year/:month/:day/:title/"
