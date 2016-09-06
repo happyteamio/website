@@ -14,7 +14,6 @@ Let's analyse this problem from a few perspectives.
  
 ## Broader talent pool
 Right now we have people working from 4 different cities already. By being remote we're not limited to searching people only in one city or area. We can find great people all over the world, ones that share our values, present great expertise and are as passionate about helping our clients as we are!
-Those highly skilled and motivated people can work with you on your product!
  
 ## Remote workers are happier
 TINYpulse - a company specializing in improving other companies' culture and employee engagement - prepared a survey ["What leaders need to know about remote workers"](https://cdn2.hubspot.net/hubfs/443262/TINYpulse_What_Leaders_Need_to_Know_About_Remote_Workers.pdf)
