@@ -35,7 +35,9 @@ There is one rule, that's very important while working with remote people — ev
 
 ## Longer 'zone'
 You've probably already heard about 'the zone', a state in which a developer is completely focused on his task, understands the context and all implications of what needs to be done. [This](http://cpuboss.com/blog/dont-interrupt-programmer/) is humorous way to show how 'getting in the zone' works in the office :)
+
 And it's not a myth. Today's applications are big and complicated products with thousands of lines of code, often scattered across many interoperating services. It takes an effort to build a map of what's going on in a developer's head. Without this we wouldn't be able to follow data flows and understand how our code impacts the rest of application and what side effect could it cause. In an office it's not an easy task. We're usually sitting in a big open space (although there are number of publications stating it's counterproductive), surrounded by various distractions like a group of guys talking about yesterday's football game, another team having a standup meeting few steps away or  someone talking over the phone next to you. It does not help when you need to stay focused. And how does it end? You rent this nice and cosy office in a city centre, as you heard that open space can help collaboration, you hire your developers, but when you enter the room all you can see is headphones :)
+
 Working remotely helps you manage those interruptions. You can choose where you work and when you work, limiting all the interruptions that could happen and choose what's best for the moment.
 
 As you can see, hiring remote teams has way more advantages than reducing costs. It's not a new passing trend, but rather a continuous industry effort to increase productivity and quality in IT and in our lives.
