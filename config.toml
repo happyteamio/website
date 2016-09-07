@@ -14,3 +14,7 @@ metaDataFormat = "yaml"
             image			= "/images/mihcall.png"
             fullname        = "Michał Śliwoń"
             bio				= "Michał is a passionate software developer touching everything from C# to Javascript frameworks, not afraid of F# and Objective-C. He loves meetups and conferences."
+        [params.authors.biegal]
+            image			= "/images/biegal.png"
+            fullname        = "Marcin Biegała"
+            bio				= "Dev, motorcyclist, dreamer and coffee lover. He starts every day with a new idea and strives to be at least a bit better by sunset. No one told him that some things are not possible in code, so he does it all."
