@@ -1422,6 +1422,7 @@ a.anchor {
 .four-articles .blog img {
 	display: inline-block;
 	margin-bottom: 7px;
+	max-height: 165px;
 }
 
 .four-articles .blog h3 {
