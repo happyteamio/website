@@ -8,7 +8,7 @@ cover: "/images/how-do-we-take-care-of-our-self-development.jpg"
 ---
 We think that feedback shaped our company. We would have probably never decided to found it without an established feedback culture. It plays a huge role in our ways of working and it's quite embedded into everything we do.
 
-Feedback allows learning and sometimes is necessary to make **any** progress. It supports a process of making small steps towards your destination and changing the course frequently. This way you reach your goals faster!
+Feedback allows learning and sometimes is necessary to make progress. It supports a process of making small steps towards your destination and changing the course frequently. This way you reach your goals faster!
 
 Feedback allowed us to:
 
@@ -16,14 +16,14 @@ Feedback allowed us to:
 - be better at programming (every time someone is writing a non-trivial piece of code there is at least one person reviewing the change and giving feedback, in a project it's usually every user story which gets reviewed),
 - be better at writing blog posts (every time someone is writing a blog post, there is at least one person reviewing it).
 
-Feedback also plays an important role in taking care of each other. Being nice, appreciating someone's efforts and actually thanking someone is a part of creating a nice atmosphere in the team. The better the atmosphere, the more happy and productive we all are.
+Feedback also plays an important role in taking care of each other. Being nice, appreciating someone's efforts and actually thanking someone is a part of creating a nice atmosphere in the team. The better the atmosphere, the happier and more productive we all are.
 
 How are we facilitating feedback at Happy Team:
 
 - #feedback channel on Slack, this is meant for continuous feedback in an open and friendly space,
-- direct feedback after the talk, this helps us boost our presentation skills and the improve the contents of this particular talk,
+- direct feedback after the talk, this helps us boost our presentation skills and improve the contents of this particular talk,
 - code reviews (github + slack), we learned quite a lot from each other during those,
-- karma plugin to Slack, allows us to give +1 to anyone for a specific thing and @karma takes care of leaderboard.
+- [karma plugin to Slack](https://github.com/happyteamio/elkarmo), allows us to give +1 to anyone for a specific thing and @karma takes care of leaderboard.
 
 Be creative about when to ask for or give feedback. It's probably better to have it a bit more often. Unexpected forms of giving feedback are also fun! They can work miracles!
 
