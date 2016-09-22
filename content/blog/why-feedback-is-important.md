@@ -1,10 +1,10 @@
 ---
 title: 	"Why feedback is important"
-date: 	2016-09-30
-description: "We think that feedback shaped our company. We would probably never decide to found it without an established feedback culture. It plays a huge role in our ways of working and it's quite embedded into everything we do."
+date: 	2016-09-22
+description: "We think that feedback shaped our company. We would have probably never decided to found it without an established feedback culture. It plays a huge role in our ways of working and it's quite embedded into everything we do."
 author: "mihcall"
 type: post
-cover: "/images/how-do-we-take-care-of-our-self-development.jpg"
+cover: "/images/why-feedback-is-important.jpg"
 ---
 We think that feedback shaped our company. We would have probably never decided to found it without an established feedback culture. It plays a huge role in our ways of working and it's quite embedded into everything we do.
 
