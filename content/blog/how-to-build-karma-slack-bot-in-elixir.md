@@ -655,7 +655,7 @@ Since the application is now configured to start supervisor its best to run `mix
 Release
 --
 
-There are few ways to pack the application for release. Originally I used [exrm](https://github.com/bitwalker/exrm) but it turns out that it is going to be replaced by [distillery](https://github.com/bitwalker/distillery). But as the of writing it's still in beta and seems not to work well under Windows, so use exrm instead:
+There are few ways to pack the application for release. Originally I used [exrm](https://github.com/bitwalker/exrm) but it turns out that it is going to be replaced by [distillery](https://github.com/bitwalker/distillery). But at the time of writing it's still in beta and seems not to work well under Windows, so use exrm instead:
 
 Update dependencies in `mix.exs`:
 
@@ -673,4 +673,4 @@ Run `mix do deps.get, deps.compile` to fetch exrm. If that succeeds, run `mix re
 
 _I experienced some problems with Windows releases so I recommend using macOS/Linux_
 
-The final version of the project is available at [https://github.com/happyteamio/elkarmo](https://github.com/happyteamio/elkarmo). Suggestions and pull requests are welcome!
+The final version of the project is available at [https://github.com/happyteamio/elkarmo](https://github.com/happyteamio/elkarmo). Questions, suggestions and pull requests are welcome!
