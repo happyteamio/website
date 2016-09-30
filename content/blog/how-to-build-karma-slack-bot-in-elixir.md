@@ -7,9 +7,9 @@ title: How to build karma Slack bot in Elixir
 type: post
 ---
 
-What constant feedback, working remotely and self-improvement have in common? These are the values we hold at HappyTeam. Few years ago, when we were using HipChat for async communication, we discovered a nice bot called [karma](https://bitbucket.org/atlassianlabs/ac-koa-hipchat-karma). It was a cool add-on to our feedback culture, allowing us to give each other "karma points". These points could be later used while voting for Sprint MVP for instance ([See mihcall's blog post for more details about Sprint MVP](http://blog.mihcall.com/2014/12/21/A-recipe-for-a-happy-software-development-team/)).
-When we moved to Slack, which doesn't have anything similar out-of-the box, we missed this feature a lot. There were few third party plugins (both proprietary and open source) but most of them had some drawbacks. 
-I thought that this might be a great opportunity to write such bot myself in a language that I've been learning for some time and felt very enthusiastic about. This language was Elixir. I chose it because it was something outside of my everyday .NET world, something fresh, multiplatform, functional.
+What constant feedback, working remotely and self-improvement have in common? These are the values we hold dear at HappyTeam. A few years ago, when we were using HipChat for async communication, we discovered a nice bot called [karma](https://bitbucket.org/atlassianlabs/ac-koa-hipchat-karma). It was a cool add-on to our feedback culture, allowing us to give each other "karma points". These points could be later used while voting for Sprint MVP for instance ([See mihcall's blog post for more details about Sprint MVP](http://blog.mihcall.com/2014/12/21/A-recipe-for-a-happy-software-development-team/)).
+When we moved to Slack, which doesn't have anything similar out-of-the box, we missed this feature a lot. There were a few third party plugins (both proprietary and open source) but most of them had some drawbacks. 
+I thought that this might be a great opportunity to write such a bot myself in a language that I've been learning for some time and felt very enthusiastic about. This language was Elixir. I chose it because it was something outside of my everyday .NET world, something fresh, multiplatform, functional.
 
 In this post I'll show you how to build a Slack bot in Elixir. For readers who are starting their adventure with Elixir I explained some of the constructs and provided links to appropriate Elixir's guide pages.
 
@@ -116,7 +116,7 @@ _To exit iex press Ctrl+C twice_
 Identifying direct messages
 --
 
-Whether you're interacting with the bot via private message or not, various functions are enabled. For private messages you only show karma, while for public messages you have to parse their contents.
+Depending on the channel of your interaction with the bot (private or public), various functions are enabled. For private messages you only show karma, while for public messages you have to parse their contents.
 
 Check for private messages by adding the following function to _slack.ex_:
 
