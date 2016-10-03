@@ -151,7 +151,7 @@ You can test the bot using iex as described earlier.
 Parsing messages
 --
 
-_Please note that inside RTM API, the messages don't look the same as in GUI client, instead of mentions, user ids are used. So, if someone sends "Hi @jack!" message, you will receive it as something similar to "Hi <@U07A2APBP>", where "U07A2APBP" is the user's id._
+_Please note that inside RTM API, the messages don't look the same as in GUI client, instead of mentions, user ids are used. So, if someone says "Hi @jack!", you will see something similar to "Hi <@U07A2APBP>", where "U07A2APBP" is the user's id._
 
 For different types of operations supported, parser will return appropriate [atom](http://elixir-lang.org/getting-started/basic-types.html#atoms):
 
@@ -235,7 +235,7 @@ defmodule Elkarmo.ParserTest do
 end
 ```
 
-For some explanation: `@my_id` is a [module attribute](http://elixir-lang.org/getting-started/module-attributes.html), similar to constants in other languages. Here, it is used together with [string interpolation](http://elixir-lang.org/getting-started/basic-types.html#strings) to represent the bot's id. Eg. `"<@#{@my_id}> reset"` turns into `"<@U1J28HCKC> reset"`.
+Some explaining is in order: `@my_id` is a [module attribute](http://elixir-lang.org/getting-started/module-attributes.html), similar to constants in other languages. Here it is used together with [string interpolation](http://elixir-lang.org/getting-started/basic-types.html#strings) to represent the bot's id. Eg. `"<@#{@my_id}> reset"` turns into `"<@U1J28HCKC> reset"`.
 
 Run the tests with the following command from project's root directory:
 ```
@@ -270,7 +270,7 @@ defmodule Elkarmo.Parser do
 end
 ```
 
-There're some interesting constructs inside `parse` function. First, there's [_cond_](http://elixir-lang.org/getting-started/case-cond-and-if.html#cond) block which evaluates a series of conditions and returns the first one which is _true_. The first two lines are matching message contents against the [regular expression sigils](http://elixir-lang.org/getting-started/sigils.html#regular-expressions) to check for `info` and `reset` commands. If neither branch matches, then the _default_ branch is executed, which calls `extract_karma` function and returns `nil` or `:update` tuple depending on the result.
+There are some interesting constructs inside the `parse` function. First, there's [_cond_](http://elixir-lang.org/getting-started/case-cond-and-if.html#cond) block which evaluates a series of conditions and returns the first one which is _true_. The first two lines are matching message contents against the [regular expression sigils](http://elixir-lang.org/getting-started/sigils.html#regular-expressions) to check for `info` and `reset` commands. If neither branch matches, then the _default_ branch is executed, which calls `extract_karma` function and returns `nil` or `:update` tuple depending on the result.
 
 In `extract_karma` there's another interesting Elixir construct, `for` aka [comprehension](http://elixir-lang.org/getting-started/comprehensions.html). `Regex.scan` here is the _generator_ and produces the list of three-element regex matches. Each match is then decomposed into `_match` (ignored), `user` and `karma`. The last two are used to create a tuple `{user, points}`.
 
@@ -295,7 +295,7 @@ def handle_message(message = %{type: "message"}, slack) do
 end
 ```
 
-Elixir's [_case_](http://elixir-lang.org/getting-started/case-cond-and-if.html#case) statement is similar to `case` in C-like languages with various, cool pattern-matching capabilities. For instance, `:update` tuple is deconstructed to extract changes to the `changes` variable.
+Elixir's [_case_](http://elixir-lang.org/getting-started/case-cond-and-if.html#case) statement is similar to `case` in C-like languages with some cool pattern-matching capabilities. For instance, `:update` tuple is deconstructed to extract modifications to the `changes` variable.
 
 Add stubs for new functions to `slack.ex` and remove unused `say_hello`:
 
