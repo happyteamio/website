@@ -321,7 +321,7 @@ Bot should now respond to your commands with simple messages.
 Representation
 --
 
-Time to think how to represent users' scores. The dictionary seems the most obvious choice with users' ids as keys and their scores as values. The dictionary equivalent in Elixir is the [map structure](http://elixir-lang.org/getting-started/keywords-and-maps.html#maps). Here's an example of such map for storing points: 
+Time to think about representing users' scores. The dictionary seems the most obvious choice with users' ids as keys and their scores as values. The dictionary equivalent in Elixir is the [map structure](http://elixir-lang.org/getting-started/keywords-and-maps.html#maps). Here's an example of such a map for storing points: 
 ```
 %{"U1J28HCKC" => 3, "U1A2B3C4D" => -5}
 ```
@@ -420,7 +420,7 @@ To learn more about `Enum.reduce/3`, read the [documentation](http://elixir-lang
 Formatting
 --
 
-Time to implement a formatter which will turn karma representation into user-readable Slack messages. It will be shown as a list of nicks along with the score. I decided that if there's a single user with the most points there will be a thumbs-up emoji next to the score. 
+Time to implement a formatter which will turn karma representation into user-readable Slack messages. It will be shown as a list of usernames along with the score. I decided that if there's a single user with the most points there will be a thumbs-up emoji next to the score. 
 
 Put the tests for formatter in `test/elkarmo/formatter_test.exs`:
 
@@ -594,7 +594,7 @@ defmodule Elkarmo do
 end
 ```
 
-This supervisor gets slack token from the application configuration (you will add it soon), registers `Elkarmo.Store` and `Elkarmo.Slack` as its children and passes default state to them (empty karma for Store and token for Slack). Store is first cause Slack depends on it. Next the supervisor is started with `one_for_one` strategy (it means that if a child dies, it will be the only one restarted).
+This supervisor gets slack token from the application configuration (you will add it soon), registers `Elkarmo.Store` and `Elkarmo.Slack` as its children and passes default state to them (empty karma for Store and token for Slack). Store is first because Slack depends on it. Next the supervisor is started with `one_for_one` strategy (it means that if a child dies, it will be the only one restarted).
 
 Update `application` function in `mix.exs` to register `Elkarmo` as the ["application callback module"](http://elixir-lang.org/getting-started/mix-otp/supervisor-and-application.html#the-application-callback) (the one that is started with the app):
 
