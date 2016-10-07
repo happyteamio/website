@@ -124,7 +124,7 @@ Check for private messages by adding the following function to _slack.ex_:
 defp is_direct_message?(%{channel: channel}, slack), do: Map.has_key? slack.ims, channel
 ```
 
-The code above extracts channel from map given in the first parameter (again, thanks to pattern matching) and checks if that channel is the [im message channel](https://api.slack.com/methods/im.list) by looking for its presence in the list of direct channels (`slack.ims`). Method name ends with a question mark to denote that is returns a boolean (convention common in Ruby).
+The code above extracts channel from map given in the first parameter (again, thanks to pattern matching) and checks if that channel is the [im message channel](https://api.slack.com/methods/im.list) by looking for its presence in the list of direct channels (`slack.ims`). Method name ends with a question mark to denote that it returns a boolean (convention common in Ruby).
 
 Having knowledge of message type, change (only) the main handler to the following:
 
@@ -650,7 +650,7 @@ The last function works as a protection against users giving karma points to the
 
 That's it! Now if you run `iex -S mix` or `mix run --no-halt` the bot should connect automatically to Slack and be fully functional!
 
-Since the application is now configured to start supervisor its best to run `mix test --no-start` when testing. Without `--no-start` it would connect to Slack.
+Since the application is now configured to start supervisor it's best to run `mix test --no-start` when testing. Without `--no-start` it would connect to Slack.
 
 Release
 --
@@ -669,7 +669,7 @@ defp deps do
 end
 ```
 
-Run `mix do deps.get, deps.compile` to fetch exrm. If that succeeds, run `mix release`. The release will be in `rel/elkarmo` directory. The release targets the OS type that you're using, so use cannot use Linux-generated release on Windows and vice versa. To start elkarmo in the foreground run `rel/elkarmo/bin/elkarmo console` (on Windows administrator privileges might be needed). Run `rel/elkarmo/bin/elkarmo` alone to see possible options.
+Run `mix do deps.get, deps.compile` to fetch exrm. If that succeeds, run `mix release`. The release will be in `rel/elkarmo` directory. The release targets the OS type that you're using, so you cannot use Linux-generated release on Windows and vice versa. To start elkarmo in the foreground run `rel/elkarmo/bin/elkarmo console` (on Windows administrator privileges might be needed). Run `rel/elkarmo/bin/elkarmo` alone to see possible options.
 
 _I experienced some problems with Windows releases so I recommend using macOS/Linux_
 
