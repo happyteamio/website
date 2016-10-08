@@ -1610,7 +1610,8 @@ a.anchor {
 	margin: 0 0 9px;
 }
 
-.blog-content p {
+.blog-content p,
+.blog-content li {
 	line-height: 1.6;
 }
 
