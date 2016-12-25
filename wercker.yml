@@ -10,3 +10,8 @@ build:
         username: wercker_website@happyteam.io
         password: $PASSWORD
         subfolder: public
+  after-steps:
+    - install-packages:
+        packages: ruby
+    - wantedly/pretty-slack-notify:
+        webhook_url: $SLACK_NOTIFY_WEBHOOK
