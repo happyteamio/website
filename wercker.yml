@@ -1,0 +1,12 @@
+box: ubuntu
+build:
+  steps:
+    - install-packages:
+        packages: curl
+    - arjen/hugo-build@1.13.1:
+        version: "0.17"
+    - biegal/ftp-deploy@1.0.5:
+        destination: ftp://happyteam.io
+        username: wercker_website@happyteam.io
+        password: $PASSWORD
+        subfolder: public
