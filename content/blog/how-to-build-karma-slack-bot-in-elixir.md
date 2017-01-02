@@ -1,6 +1,6 @@
 ---
 author: "eldhash"
-cover: /images/how-to-build-karma-slack-bot-in-elixir.png
+cover: /images/how-to-build-karma-slack-bot-in-elixir.jpg
 date: 2016-10-03T18:49:23+02:00
 description: Elixir is a young, exciting language with rapidly growing community. Let's use it to create Slack bot, which is a cool addition to the feedback in your team.
 title: How to build karma Slack bot in Elixir
