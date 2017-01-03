@@ -1,6 +1,6 @@
 <div class="recent">
     <h3>Recent Posts</h3>
-    {{ range first 4 .Site.Pages }}
+    {{ range first 4 (where .Site.Pages "Type" "post") }}
         {{ if eq .Type "post"}}
             {{ $author := index .Site.Params.authors .Params.author }}
             <div class="post">

@@ -9,14 +9,16 @@
 					<div class="holder">
 						<div class="blog-content">
 							{{ range .Paginator.Pages }}
-							{{ $author := index .Site.Params.authors .Params.author }}
-							<article class="blog-section">
-								<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-								<span class="author">{{ $author.fullname }}</span>
-								<img src="{{ .Params.cover }}" alt="{{ .Title }}">
-								<p>{{ .Description }}</p>
-								<a href="{{ .Permalink }}" class="btn">read more</a>
-							</article>
+							{{ if .Params.author }}
+								{{ $author := index .Site.Params.authors .Params.author }}
+								<article class="blog-section">
+									<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+									<span class="author">{{ $author.fullname }}</span>
+									<img src="{{ .Params.cover }}" alt="{{ .Title }}">
+									<p>{{ .Description }}</p>
+									<a href="{{ .Permalink }}" class="btn">read more</a>
+								</article>
+								{{ end }}
 							{{ end }}
 
 

@@ -1,10 +1,12 @@
-{{ $author := index .Site.Params.authors .Params.author }}
-<div class="author-box team-text">
-    <div class="img-holder first">
-        <img src="{{ $author.image }}" alt="{{ $author.fullname }}">
+{{ if .Params.author }}
+    {{ $author := index .Site.Params.authors .Params.author }}
+    <div class="author-box team-text">
+        <div class="img-holder first">
+            <img src="{{ $author.image }}" alt="{{ $author.fullname }}">
+        </div>
+        <div class="data">
+            <div>{{ $author.fullname }}</div>
+            <div class="bio">{{ $author.bio }}</div>
+        </div>
     </div>
-    <div class="data">
-        <div>{{ $author.fullname }}</div>
-        <div class="bio">{{ $author.bio }}</div>
-    </div>
-</div>
+{{ end }}
