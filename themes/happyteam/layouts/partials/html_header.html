@@ -11,11 +11,11 @@
     <meta name="description" content="Happy Team delivers dedicated software solutions and provide consultancy to a wide variety of industries. We supports customers from around the world in their business by providing them with smart and passionate software developers. Every one of them spent last decade expanding his skills in software development field choosing different paths and technologies." />
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for HappyTeam.io" href="/index.xml" />
 	<link rel="icon" type="image/png" href="/images/favicon.png" />
-    <link media="all" rel="stylesheet" href="/css/main.min.css">
+    <link media="all" rel="stylesheet" href="/css/main.min.css?{{ dateFormat "20060102150405" .Now }}">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,700italic,800,800italic,400italic,300italic,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
-    <link rel="stylesheet" href="/css/default.min.css">
+    <link rel="stylesheet" href="/css/default.min.css?{{ dateFormat "20060102150405" .Now }}">
     <link rel="canonical" href="{{ .Permalink }}"/>
     {{ if .IsPage }}
         {{ if eq .Type "post"}}
