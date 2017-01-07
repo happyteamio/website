@@ -253,7 +253,7 @@
 						<h2>What's new?</h2>
 						<span class="orange">Our Blog</span>
 						<div class="four-articles">
-                            {{ range first 4 .Data.Pages }}
+                            {{ range first 4 (where .Site.Pages "Type" "post") }}
                                 {{ if eq .Type "post"}}
 								{{ $author := index .Site.Params.authors .Params.author }}
                                     <article class="blog">
