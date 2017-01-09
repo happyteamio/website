@@ -201,7 +201,16 @@
 									of none. Will code at 4 AM because he can.</p>
 							</li>
 							<li>
-								<div class="img-holder third">
+								<div class="img-holder">
+									<img src="images/amarszalek.png" alt="Artur Marszałek">
+								</div>
+								<span class="name">Artur Marszałek</span>
+								<p>Young Java, JavaScript, C# dev. He still believes that clean code and unit tests make a difference. His motivation
+									to work is a desire to continuously develop himself. He likes challenges and solving difficult problems. After work
+									he tries to keep in shape.</p>
+							</li>
+							<li>
+								<div class="img-holder forth">
 									<img src="images/warna.png" alt="Damian Tarnacki">
 								</div>
 								<span class="name">Damian Tarnacki</span>
@@ -264,13 +273,12 @@
 					<ul class="list" style="margin-left: auto; margin-right: auto; max-width: 1220px">
 						<li class="list-item">
 							<div class="list-content">
-								<img style="height: 100px;" src="images/testimonials/logo_rainbow_rgb.png"/>
+								<img style="height: 100px;" src="images/testimonials/logo_rainbow_rgb.png" />
 								<p style="margin-top: 15px;">
 									Our cooperation with Happy Team started when Kuba Walinski - one of the founders - gave us a helping hand on a project that
-									was at risk. Even though we never met in person I must admit that any work done for us by Happy Team is of great quality and 
-									always on time. Moreover, Happy Team understands our business very well, even though we 
-									realise our explanations are not always crystal clear ;)<br/>
-									I definitely recommend Happy Team!
+									was at risk. Even though we never met in person I must admit that any work done for us by Happy Team is of great
+									quality and always on time. Moreover, Happy Team understands our business very well, even though we realise our
+									explanations are not always crystal clear ;)<br/> I definitely recommend Happy Team!
 								</p>
 								<span>
 									Emilia Bratkowska<br/>
@@ -280,9 +288,11 @@
 						</li>
 						<li class="list-item">
 							<div class="list-content">
-								<img style="height: 100px;" src="images/testimonials/Ricky-0010.png"/>							
+								<img style="height: 100px;" src="images/testimonials/Ricky-0010.png" />
 								<p style="margin-top: 15px;">
-									I have been working with Happy Team for over a year and have been impressed with their talent, professionalism and problem solving abilities.  They have always delivered on time without the need for oversight.  They have been a true force multiplier for my business.
+									I have been working with Happy Team for over a year and have been impressed with their talent, professionalism and problem
+									solving abilities. They have always delivered on time without the need for oversight. They have been a true force
+									multiplier for my business.
 								</p>
 								<span>
 									Riccardo Terrell<br/>
@@ -298,15 +308,18 @@
 					<h2>What's new?</h2>
 					<span class="orange">Our Blog</span>
 					<div class="four-articles">
-						{{ range first 4 .Data.Pages }} {{ if eq .Type "post"}} {{ $author := index .Site.Params.authors .Params.author }}
-						<article class="blog">
-							<img src="{{ .Params.cover }}" alt="{{ .Title }}">
-							<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-							<span class="author">{{ $author.fullname }}</span>
-							<p>{{ .Description }}</p>
-							<a href="{{ .Permalink }}">read more</a>
-						</article>
-						{{ end }} {{ end }}
+						{{ range first 4 (where .Site.Pages "Type" "post") }}
+							{{ if eq .Type "post"}} 
+							{{ $author := index .Site.Params.authors .Params.author}}
+							<article class="blog">
+								<img src="{{ .Params.cover }}" alt="{{ .Title }}">
+								<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+								<span class="author">{{ $author.fullname }}</span>
+								<p>{{ .Description }}</p>
+								<a href="{{ .Permalink }}">read more</a>
+							</article>
+							{{ end }}
+						{{ end }}
 					</div>
 					<a href="/blog" class="btn">See All</a>
 				</div>
