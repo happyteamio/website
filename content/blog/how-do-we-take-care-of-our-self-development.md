@@ -39,9 +39,9 @@ Whenever we want to boost our skills and it requires money, we don't have to thi
 
 There's lot more ideas how to use this money already. Let's wait for results!
 
-Development Day
+Developer Day
 --
-Once in a while we organise [Development Day](http://blog.mihcall.com/2015/01/13/Developer-Day-A-Day-Dedicated-To-Learning-New-Things/) and spend it on learning totally new things which we don't usually touch when doing work for the client. At the end of such day we share our knowledge with other members of the team. This way we can inspire each other and teach ourselves something new. Topics vary from Scala, code review tools, new javascript frameworks (yes!) to learning Swift. Whatever exciting we'll find - we'll touch it!
+Once in a while we organise [Developer Day](http://blog.mihcall.com/2015/01/13/Developer-Day-A-Day-Dedicated-To-Learning-New-Things/) and spend it on learning totally new things which we don't usually touch when doing work for the client. At the end of such day we share our knowledge with other members of the team. This way we can inspire each other and teach ourselves something new. Topics vary from Scala, code review tools, new javascript frameworks (yes!) to learning Swift. Whatever exciting we'll find - we'll touch it!
 
 Brown Bag sessions
 --
