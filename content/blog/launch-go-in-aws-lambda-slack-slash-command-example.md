@@ -1,27 +1,27 @@
 ---
 author: "biegal"
 cover: /images/launch-go-in-aws-lambda-slack-slash-command-example.jpg
-date: 2017-01-01T18:49:23+02:00
+date: 2017-01-16T08:49:23+02:00
 description: GO is often called 'language of the cloud'. Let's see how we can use it to utilize AWS Lambda and create Slack Slash command. It's easy and serverless ;)
 title: Launch Go in AWS Lambda - Slack slash command example
 type: post
 ---
-So many things are happening in the 'infrastructure' part of software development. In just few years, we've moved from a grey box under your boss' desk, through virtual machines, things like [Chef](https://www.chef.io/chef/), [Docker](https://www.docker.com/) to [Serverless Architectures](http://martinfowler.com/articles/serverless.html). 
-As much as I don't like buzzwords, for me as a developer, idea of not having too much concern about where my code is running is quite appealing. I can just focus on 'what' it's doing!
+There are so many things happening in the 'infrastructure' part of software development. In just few years, we've moved from a grey box under your boss' desk, through virtual machines, things like [Chef](https://www.chef.io/chef/), [Docker](https://www.docker.com/) to [Serverless Architectures](http://martinfowler.com/articles/serverless.html). 
+As much as I don't like buzzwords, for me as a developer, the idea of not having too much concern about where my code is running is quite appealing. I can just focus on 'what' it's doing!
 Let's see what this 'serverless' means in a nutshell:
 
-> _Serverless architectures refer to applications that significantly depend on third-party services (knows as Backend as a Service or "BaaS") or on custom code that's run in ephemeral containers (Function as a Service or "FaaS"), the best known vendor host of which currently is AWS Lambda. By using these ideas, and by moving much behavior to the front end, such architectures remove the need for the traditional 'always on' server system sitting behind an application._  
+> _Serverless architectures refer to applications that significantly depend on third-party services (knows as Backend as a Service or "BaaS") or on custom code that runs in ephemeral containers (Function as a Service or "FaaS"), the best known vendor host of which currently is AWS Lambda. By using these ideas, and by moving much behavior to the front end, such architectures remove the need for the traditional 'always on' server system sitting behind an application._  
 
-So I can run my code without setting up servers, networking etc. and I don't need to pay for whole thing if it's not used! If you don't have customers yet, you don't need to pay. You don't need to think about fallback servers or how many servers you need to handle rising traffic, you just pay when you use. That's a huge benefit, especially at the beginning of your road to success.
-But that's also great fit for small things that could help your day-to-day life but are often not worth setting up a whole machine if it’s being used once or twice per day.
+So I can run my code without setting up servers, networking etc. and I don't need to pay for whole thing if it's not used! If you don't have customers yet, you don't need to pay. You don't need to think about fallback servers or how many servers you need to handle rising traffic, you just pay when you use it. That's a huge benefit, especially at the beginning of your road to success.
+Moreover, that's also great fit for small things that could help your day-to-day life and are often not worth setting up a whole machine if it’s being used once or twice per day.
 Such characteristic perfectly describes Slack slash commands. In HappyTeam we're using Slack extensively, both for internal communication and for communication with our clients (and if you follow our blog you should also know how to build Slack [bot already](http://happyteam.io/blog/2016/10/03/how-to-build-karma-slack-bot-in-elixir/)). 
 
-We now know what AWS Lambda is. Second ingridient is Go. Although AWS Lambda doesn't support Go yet, I fancy it a lot and try to use it anywhere I can :) 
+Now we know what AWS Lambda is. The second ingredient is Go. Although AWS Lambda doesn't support Go yet, I fancy it a lot and try to use it anywhere I can :) 
 So let's see how can we use Go to build a Slack command hosted on AWS Lambda!
 
 ## Install AWS CLI
-AWS CLI will help us comunicate with AWS API from terminal and create lambda functions on the fly.
-First we need python. I'm on OSX, so I'll just type:  
+AWS CLI will help us to communicate with AWS API from terminal and create lambda functions on the fly.
+Firstly, we need python. I'm on OSX, so I'll just type:  
 `brew install python`  
 in my terminal.  
 Then we need AWS CLI:  
@@ -36,7 +36,7 @@ If no errors are thrown, we're good to go.
 We’re missing one more thing before rushing to the code - IAM Role for our lambda function.
 Open up Roles section in [AWS console](https://console.aws.amazon.com/iam/home?region=eu-west-1#/roles)
 and create a new role named `lambda_basic_execution`.  
-In the next step select `AWS Lambda` as Role Type 
+In the next step, select `AWS Lambda` as Role Type 
 
 ![](/images/post-go-aws-lambda/select_role_type.png)  
 
@@ -45,17 +45,17 @@ Success!
 
 ## Create Lambda
 Time for some coding.
-I assume you have Go installed already (you can find packages and install instructions for your system on official website [Downloads - The Go Programming Language](https://golang.org/dl/) , version 1.7.4 is latest stable at the time of writing this post). 
+I assume that you have Go installed already (you can find packages and install instructions for your system on official website [Downloads - The Go Programming Language](https://golang.org/dl/), version 1.7.4 is the latest stable at the time of writing this post). 
 Create a new folder in your `GOPATH` like:
 ```
 mkdir happy-slash-command
 cd happy-slash-command
 ```
 
-We will be using  [GitHub - xlab/go-lambda](https://github.com/xlab/go-lambda) project, to wrap up our go code and execute on AWS Lambda (as it's not natively supported yet).
+We will be using  [GitHub - xlab/go-lambda](https://github.com/xlab/go-lambda) project, to wrap up our GO code and execute on AWS Lambda (as it's not natively supported yet).
 First get the package via:  
 `go get github.com/xlab/go-lambda`  
-Now spin up your favourite code editor and create new file called `happy-slash-command.go` with following content:
+Now spin up your favorite code editor and create new file called `happy-slash-command.go` with following content:
 ```
 package happyteam
 
@@ -76,7 +76,7 @@ func happyHandler(event json.RawMessage, context *lambda.Context) []byte {
 }
 ```
 
-It's basically a hello world application for now but you can develop here whatever you like, from simple calculations, through webservice calls to get weather, image processing - you get the idea.
+It's basically a hello world application for now but you can develop here whatever you want, from simple calculations, through webservice calls to get weather, image processing - you get the idea.
 For now, we just need something basic, to prove it all works.  	
 
 Now it's time to use the lib to create lambda function from our code.
@@ -91,15 +91,15 @@ If everything went fine, you should see a summary table in your console, and new
 
 ![](/images/post-go-aws-lambda/lambda_ready.png)
 
-Go on, click on the lambda name and use blue 'Test' button to see that it works:
+Go on, click on the lambda name and use blue 'Test' button to see if it works:
 
 ![](/images/post-go-aws-lambda/lambda_test.png)
 
 Yeey! We've got ourselves a lambda function!
 
 ## API Gateway
-We've got funcionality in place, time to make it available outside - we need to set up URL for our lambda.
-Get back to your AWS console and open up `API Gateway` portal. Create new gateway and set it's name:  
+We've got functionality in place, time to make it available outside - we need to set up URL for our lambda.
+Get back to your AWS console and open up `API Gateway` portal. Create new gateway and set its name:  
 
 ![](/images/post-go-aws-lambda/api_gateway_name.png)
 
@@ -110,7 +110,7 @@ You should get a similar diagram at this point:
 
 ![](/images/post-go-aws-lambda/gateway_diagram.png)
 
-You can test your integration with a blue test button in upper left.
+You can test your integration with a blue test button on upper left.
 
 Ok, now from Actions menu, select `Deploy API` entry and create a new stage.  
 
