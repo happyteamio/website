@@ -21,4 +21,4 @@ website-email-test:
   steps:
     - script:
       name: test email forms
-      code: $WERCKER_ROOT/deployscripts/formspree-hugo-mail-test ../public/sitemap.xml contact@happyteam.io
+      code: $WERCKER_ROOT/deployscripts/formspree-hugo-mail-test $WERCKER_ROOT/public/sitemap.xml contact@happyteam.io
