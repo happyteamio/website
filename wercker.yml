@@ -19,6 +19,8 @@ website-deploy:
         webhook_url: $SLACK_NOTIFY_WEBHOOK
 website-email-test:
   steps:
+    - install-packages:
+      packages: ca-certificates
     - script:
       name: test email forms
       code: $WERCKER_ROOT/deployscripts/formspree-hugo-mail-test $WERCKER_ROOT/public/sitemap.xml contact@happyteam.io
