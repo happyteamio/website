@@ -12,15 +12,15 @@ Let's see what this 'serverless' means in a nutshell:
 
 > _Serverless architectures refer to applications that significantly depend on third-party services (knows as Backend as a Service or "BaaS") or on custom code that runs in ephemeral containers (Function as a Service or "FaaS"), the best known vendor host of which currently is AWS Lambda. By using these ideas, and by moving much behavior to the front end, such architectures remove the need for the traditional 'always on' server system sitting behind an application._  
 
-So I can run my code without setting up servers, networking etc. and I don't need to pay for whole thing if it's not used! If you don't have customers yet, you don't need to pay. You don't need to think about fallback servers or how many servers you need to handle rising traffic, you just pay when you use it. That's a huge benefit, especially at the beginning of your road to success.
+So I can run my code without setting up servers, networking etc. and I don't need to pay for the whole thing if it's not used! If you don't have customers yet, you don't need to pay. You don't need to think about fallback servers or how many servers you need to handle rising traffic, you just pay when you use it. That's a huge benefit, especially at the beginning of your road to success.
 Moreover, that's also great fit for small things that could help your day-to-day life and are often not worth setting up a whole machine if it’s being used once or twice per day.
-Such characteristic perfectly describes Slack slash commands. In HappyTeam we're using Slack extensively, both for internal communication and for communication with our clients (and if you follow our blog you should also know how to build Slack [bot already](http://happyteam.io/blog/2016/10/03/how-to-build-karma-slack-bot-in-elixir/)). 
+Such characteristic perfectly describes Slack slash commands. In HappyTeam we're using Slack extensively, both for internal communication and for communication with our clients (and if you follow our blog you should also know how to build a Slack [bot already](http://happyteam.io/blog/2016/10/03/how-to-build-karma-slack-bot-in-elixir/)). 
 
 Now we know what AWS Lambda is. The second ingredient is Go. Although AWS Lambda doesn't support Go yet, I fancy it a lot and try to use it anywhere I can :) 
 So let's see how can we use Go to build a Slack command hosted on AWS Lambda!
 
 ## Install AWS CLI
-AWS CLI will help us to communicate with AWS API from terminal and create lambda functions on the fly.
+AWS CLI will help us communicate with AWS API from terminal and create lambda functions on the fly.
 Firstly, we need python. I'm on OSX, so I'll just type:  
 `brew install python`  
 in my terminal.  
