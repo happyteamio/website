@@ -5,6 +5,8 @@ description: "We think that feedback shaped our company. We would have probably 
 author: "mihcall"
 type: post
 cover: "/images/why-feedback-is-important.jpg"
+aliases:
+  - /blog/2016/09/22/why-feedback-is-important/
 ---
 We think that feedback shaped our company. We would probably never have decided to found it without an established feedback culture. It plays a huge role in our way of working and it's completely embedded into everything we do.
 

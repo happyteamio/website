@@ -5,6 +5,8 @@ description: "We are very much dedicated to our self-development at Happy Team. 
 author: "mihcall"
 type: post
 cover: "/images/how-do-we-take-care-of-our-self-development.jpg"
+aliases:
+  - /blog/2016/08/10/how-do-we-take-care-of-our-self-development/
 ---
 
 We are very much dedicated to our self-development at Happy Team. Being a consultancy company means we care about learning and improving constantly. Therefore we dedicate our own time to such activities.

@@ -5,6 +5,8 @@ description: "5+ Programme is designed to enhance our self-development at Happy 
 author: "mihcall"
 type: post
 cover: "/images/happy-teams-self-development-in-2016.jpeg"
+aliases:
+  - /blog/2017/01/12/happy-teams-self-development-in-2016/
 ---
 ["5+ Programme"](../../../../2016/08/10/how-do-we-take-care-of-our-self-development) is designed to support our self-development at Happy Team. Basically, we add 5PLN to the hourly rate of every employee and it is up to each person to decide how to spend this money. We started this in April 2016 so there has now been 9 months of putting away money for our self-development. What sorts of ideas have we supported with 5+?
 

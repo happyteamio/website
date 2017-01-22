@@ -5,6 +5,8 @@ date: 2017-01-16T08:49:23+02:00
 description: GO is often called 'language of the cloud'. Let's see how we can use it to utilize AWS Lambda and create Slack Slash command. It's easy and serverless ;)
 title: Launch Go in AWS Lambda - Slack slash command example
 type: post
+aliases:
+  - /blog/2017/01/16/launch-go-in-aws-lambda---slack-slash-command-example/
 ---
 There are so many things happening in the 'infrastructure' part of software development. In just few years, we've moved from a grey box under your boss' desk, through virtual machines, things like [Chef](https://www.chef.io/chef/), [Docker](https://www.docker.com/) to [Serverless Architectures](http://martinfowler.com/articles/serverless.html). 
 As much as I don't like buzzwords, for me as a developer, the idea of not having too much concern about where my code is running is quite appealing. I can just focus on 'what' it's doing!
