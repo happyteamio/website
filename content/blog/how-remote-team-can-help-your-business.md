@@ -5,6 +5,8 @@ date: 2016-09-07T07:33:46+02:00
 description: "You can find many articles over the web that will tell you how much better life of a remote developer is, but have you ever considered how being remote or working with a remote team could help your business?"
 title: How remote team can help your business
 type: post
+aliases:
+  - /blog/2016/09/07/how-remote-team-can-help-your-business/
 ---
 
 We were 100% remote in HappyTeam from day one. That was one of the first things we've all agreed to. And we're more than happy to see this approach spreading all over the world with more and more companies that are going remote or remote friendly at least.

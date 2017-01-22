@@ -5,6 +5,8 @@ date: 2016-10-03T18:49:23+02:00
 description: Elixir is a young, exciting language with rapidly growing community. Let's use it to create Slack bot, which is a cool addition to the feedback in your team.
 title: How to build karma Slack bot in Elixir
 type: post
+aliases:
+  - /blog/2016/10/03/how-to-build-karma-slack-bot-in-elixir/
 ---
 
 What constant feedback, working remotely and self-improvement have in common? These are the values we hold dear at HappyTeam. A few years ago, when we were using HipChat for async communication, we discovered a nice bot called [karma](https://bitbucket.org/atlassianlabs/ac-koa-hipchat-karma). It was a cool add-on to our feedback culture, allowing us to give each other "karma points". These points could be later used while voting for Sprint MVP for instance ([See mihcall's blog post for more details about Sprint MVP](http://blog.mihcall.com/2014/12/21/A-recipe-for-a-happy-software-development-team/)).

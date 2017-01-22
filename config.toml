@@ -6,7 +6,7 @@ googleAnalytics = "UA-77252115-1"
 metaDataFormat = "yaml"
 
 [permalinks]
-    blog    = "/blog/:year/:month/:day/:title/"
+    blog    = "/blog/:title/"
 
 [params]
     [params.authors]
