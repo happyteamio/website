@@ -912,12 +912,10 @@ a {
       .list-item {
         width: 50%;
       }
-
       .list-content {
         margin: 40px;
       }
     }
-
     .list-content {
       display: flex;
       flex-direction: column;
@@ -927,7 +925,6 @@ a {
       margin: 0px;
       border: 1px solid $color-primary;
       border-radius: 10px;
-
       img {
         margin-left: auto;
         margin-right: auto;
@@ -963,6 +960,52 @@ a {
   }
   .orange {
     margin: 0 0 33px;
+  }
+}
+
+.in-numbers {
+  text-align: center;
+  background: url("../images/infographics_ht2016_bg.png");
+  background-position: top 0px left 85px;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid #b5b5b4;
+
+  @include media('<tablet') {
+    background: url("../images/infographics_ht2016_bg.png");
+    background-position: center;
+  }
+
+  .holder {
+    padding-top: 65px;
+    padding-bottom: 90px;
+    @include media('<tablet') {
+      padding-top: 28px;
+      padding-bottom: 50px;
+    }
+    ul {
+      @extend %listreset;
+    }
+    .in-numbers-text {
+      max-width: 43%;
+      margin: 0 auto 0px;
+      line-height: 28px;
+      @include media('<desktop') {
+        font-size: 16px;
+        line-height: 26px;
+      }
+      @include media('<tablet') {
+        max-width: 100%;
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 40px;
+      }
+      h2 {
+        margin: 0 0 4px;
+      }
+      .orange {
+        margin: 0 0 33px;
+      }
+    }
   }
 }
 
