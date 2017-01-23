@@ -436,6 +436,7 @@ th {
 .technologies ul,
 .team-text ul,
 .testimonials .holder ul,
+.in-numbers .holder ul,
 .values ul,
 .three-columns .column ul,
 .contact-us ul,
@@ -1309,6 +1310,33 @@ a.anchor {
 	margin: 0 0 33px;
 }
 
+.in-numbers {
+	text-align: center;
+	background: url("../images/infographics_ht2016_bg.png");
+	background-position: top 0 left 85px;
+	background-repeat: no-repeat;
+	border-bottom: 1px solid #b5b5b4;
+}
+
+.in-numbers .holder {
+	padding-top: 65px;
+	padding-bottom: 90px;
+}
+
+.in-numbers .holder .in-numbers-text {
+	max-width: 43%;
+	margin: 0 auto 0;
+	line-height: 28px;
+}
+
+.in-numbers .holder .in-numbers-text h2 {
+	margin: 0 0 4px;
+}
+
+.in-numbers .holder .in-numbers-text .orange {
+	margin: 0 0 33px;
+}
+
 .name {
 	display: inline-block;
 	text-transform: uppercase;
@@ -2009,6 +2037,11 @@ a.anchor {
 		line-height: 26px;
 	}
 
+	.in-numbers .holder .in-numbers-text {
+		font-size: 16px;
+		line-height: 26px;
+	}
+
 	.values ul {
 		max-width: 100%;
 	}
@@ -2442,6 +2475,23 @@ a.anchor {
 	}
 
 	.testimonials-text {
+		max-width: 100%;
+		font-size: 18px;
+		line-height: 28px;
+		margin-bottom: 40px;
+	}
+
+	.in-numbers {
+		background: url("../images/infographics_ht2016_bg.png");
+		background-position: center;
+	}
+
+	.in-numbers .holder {
+		padding-top: 28px;
+		padding-bottom: 50px;
+	}
+
+	.in-numbers .holder .in-numbers-text {
 		max-width: 100%;
 		font-size: 18px;
 		line-height: 28px;
