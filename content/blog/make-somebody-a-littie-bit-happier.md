@@ -6,6 +6,7 @@ description: "By sharing some of what you have, you can make somebody a little b
 author: "mihcall"
 type: post
 cover: "/images/happy_kids_happy_team.png"
+draft: true
 ---
 >*“Happiness quite unshared can scarcely be called happiness; it has no taste.”*
 
