@@ -1,12 +1,11 @@
 ---
 title: 	"Make somebody a little bit happier"
-date: 	2017-02-06
+date: 	2017-02-09
 description: "By sharing some of what you have, you can make somebody a little bit happier. Like we did."
 
 author: "mihcall"
 type: post
 cover: "/images/happy_kids_happy_team.png"
-draft: true
 ---
 >*“Happiness quite unshared can scarcely be called happiness; it has no taste.”*
 
