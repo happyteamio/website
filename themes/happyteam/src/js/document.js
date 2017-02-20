@@ -22,7 +22,8 @@ $(document).ready(function(){
 
             $.cookiesDirective({
                 privacyPolicyUri: '/privacy-policy/',
-                position: 'bottom'
+                position: 'bottom',
+                explicitConsent: false
             });
         });
 

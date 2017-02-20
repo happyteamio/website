@@ -684,7 +684,8 @@ function initOpenClose() {
 
             $.cookiesDirective({
                 privacyPolicyUri: '/privacy-policy/',
-                position: 'bottom'
+                position: 'bottom',
+                explicitConsent: false
             });
         });
 
