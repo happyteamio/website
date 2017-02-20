@@ -19,5 +19,10 @@ $(document).ready(function(){
                     }
                 }
             });
+
+            $.cookiesDirective({
+                privacyPolicyUri: '/privacy-policy/',
+                position: 'bottom'
+            });
         });
 
