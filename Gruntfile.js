@@ -138,7 +138,8 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: ['themes/happyteam/src/js/jquery.main.js', 'themes/happyteam/src/js/document.js'],
+        src: ['themes/happyteam/src/js/jquery.main.js',
+        'themes/happyteam/src/js/jquery.cookiesdirective.js', 'themes/happyteam/src/js/document.js'],
         dest: 'themes/happyteam/static/js/jsbundle.js'
       }
     },
