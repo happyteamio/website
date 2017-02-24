@@ -1,0 +1,36 @@
+ul.icons {
+    cursor: default;
+    list-style: none;
+    padding-left: 0
+}
+
+ul.icons li {
+    display: inline-block;
+    padding: 0 1em 0 0
+}
+
+ul.icons li:last-child {
+    padding-right: 0
+}
+
+ul.icons li > * {
+    text-decoration: none;
+    border: 0
+}
+
+ul.icons li > *:before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none !important
+}
+
+ul.icons li > * .label {
+    display: none
+}
+
+ul.icons li a.share-btn {
+    padding: 5px 20px
+}
