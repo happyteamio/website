@@ -11,6 +11,16 @@
 						<div class="blog-content">
 							<h1>{{ .Title }}</h1>
                             {{ .Content }}
+
+							{{ if eq .Type "post" }}
+							<section id="social-share">
+								Share the happiness :)
+								<ul class="icons">
+									{{ partial "share_links.html" . }}
+								</ul>
+							</section>
+							{{ end }}
+
 							{{ partial "author_box.html" . }}
 						</div>
 						<aside class="sidebar">
