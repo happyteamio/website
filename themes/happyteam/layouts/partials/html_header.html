@@ -43,6 +43,17 @@
     <meta name="twitter:image" content="{{ .Site.BaseURL }}images/facebook_preview.png">
 	{{ end }}
 
-    {{ template "_internal/google_analytics_async.html" . }}
+    {{ with .Site.GoogleAnalytics }}
+    <script>
+    var host = window.location.hostname;
+    if(host != "localhost")
+    {
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', '{{ . }}', 'auto');
+        ga('send', 'pageview');
+    }
+    </script>
+    <script async src='//www.google-analytics.com/analytics.js'></script>
+    {{ end }}
 </head>
 <body>
