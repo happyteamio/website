@@ -452,6 +452,9 @@ th {
 .values ul:after,
 .three-columns:after,
 .three-columns .column li:after,
+.blog-section:after,
+.blog-section img:after,
+.blog-section .btn:after,
 .post:after {
 	content: "";
 	display: block;
@@ -1748,7 +1751,9 @@ a.anchor {
 
 .blog-section img {
 	display: block;
-	margin: 0 0 30px;
+	margin: 5px 10px 30px;
+	max-width: 30%;
+	float: left;
 }
 
 .blog-section p {
@@ -1760,6 +1765,7 @@ a.anchor {
 }
 
 .blog-section .btn {
+	float: right;
 	padding: 15px 42px;
 }
 
@@ -1916,6 +1922,10 @@ a.anchor {
 .author-box .data .bio {
 	font-size: 15px;
 	line-height: 20px;
+}
+
+#impliedsubmit {
+	color: black;
 }
 
 @media all and (min-width: 40em) {
@@ -2630,6 +2640,15 @@ a.anchor {
 	.contact-form {
 		width: 100%;
 		padding: 0;
+	}
+
+	.blog-section img {
+		margin: 0 0 30px;
+		max-width: 100%;
+	}
+
+	.blog-section .btn {
+		float: left;
 	}
 
 	.paging li {
