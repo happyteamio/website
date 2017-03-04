@@ -1532,6 +1532,7 @@ a {
 }
 
 .blog-section {
+  @extend %clearfix;  
   margin-bottom: 65px;
   .author,
   time {
@@ -1545,8 +1546,16 @@ a {
     margin-right: 10px;
   }
   img {
+    @extend %clearfix;
     display: block;
-    margin: 0 0 30px;
+    margin: 5px 10px 30px;
+    max-width: 30%;
+    float: left;
+
+    @include media('<tablet') {
+      margin: 0 0 30px;
+      max-width: 100%;
+    }
   }
   p {
     margin: 0 0 35px;
@@ -1555,7 +1564,12 @@ a {
     }
   }
   .btn {
+    @extend %clearfix;
+    float: right;    
     padding: 15px 42px;
+    @include media('<tablet') {
+      float:left;
+    }
   }
 }
 
@@ -1756,4 +1770,8 @@ a {
       line-height: 20px;
     }
   }
+}
+
+#impliedsubmit {
+  color: black;
 }
