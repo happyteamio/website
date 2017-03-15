@@ -1,0 +1,27 @@
+{{ partial "html_header.html" . }}
+	<div id="wrapper">
+		<div class="w1">
+			{{ partial "page_header.html" . }}
+			{{ partial "promo_box_short.html" . }}
+
+            <main id="main" role="main">
+				<div class="inner">
+					<div class="holder">
+						<div class="blog-content">
+							<h1>{{ .Title }}</h1>
+                            {{ .Content }}
+
+                            <div>
+                                If you're interested contact us at <a href="mailto:careers@happyteam.io">careers@happyteam.io</a>.
+                            </div>
+						</div>
+						<aside class="sidebar">
+							{{ partial "jobs_sidebar.html" . }}
+						</aside>
+					</div>
+				</div>
+			</main>
+		</div>
+		{{ partial "page_footer.html" . }}	
+	</div>
+{{ partial "html_footer.html" . }}
