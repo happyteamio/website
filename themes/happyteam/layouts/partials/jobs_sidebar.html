@@ -1,0 +1,8 @@
+<div class="recent">
+    <h3>Open positions</h3>
+    {{ range (where (where .Site.Pages "Type" "job") "IsPage" true) }}
+        <div class="job-entry">
+            <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+        </div>
+    {{ end }}	
+</div>

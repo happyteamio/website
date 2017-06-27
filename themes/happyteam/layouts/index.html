@@ -279,6 +279,26 @@
 					</ul>
 				</div>
 			</section>
+			<section class="join-us">
+				<a class="anchor" name="join"></a>
+                <div class="holder">
+                    <div class="join-us-text">
+                        <h2>Join</h2>
+                        <span class="orange">Come work with us</span>
+                    </div>
+					<ul class="list" style="margin-left: auto; margin-right: auto; max-width: 1220px">
+                        {{ range (where (where .Site.Pages "Type" "job") "IsPage" true) }}
+                        <li class="list-item">
+							<div class="list-content">
+                                <h3>{{ .Title }}</h3>
+                                <p>{{ .Description }}</p>
+                                <a href="{{ .Permalink }}" class="btn read-more">Read more</a>
+                            </div>
+                        </li>
+                        {{ end }}
+					</ul>
+                </div>
+            </section>
 			<section class="in-numbers">
 				<a class="anchor" name="2016-in-numbers"></a>
 				<div class="holder">

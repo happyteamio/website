@@ -437,6 +437,7 @@ th {
 .team-text ul,
 .testimonials .holder ul,
 .in-numbers .holder ul,
+.join-us .holder ul,
 .values ul,
 .three-columns .column ul,
 .contact-us ul,
@@ -455,7 +456,8 @@ th {
 .blog-section:after,
 .blog-section img:after,
 .blog-section .btn:after,
-.post:after {
+.post:after,
+.job-entry:after {
 	content: "";
 	display: block;
 	clear: both;
@@ -470,7 +472,8 @@ th {
 .social-media a,
 .contact-form input[type="submit"],
 .paging a,
-.post a {
+.post a,
+.job-entry a {
 	-webkit-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
 }
@@ -1377,6 +1380,95 @@ a.anchor {
 	margin: 0 0 33px;
 }
 
+.join-us {
+	text-align: center;
+	background: url("../images/bg-main.png");
+	border-bottom: 1px solid #b5b5b4;
+}
+
+.join-us .holder {
+	padding-top: 32px;
+	padding-bottom: 40px;
+}
+
+.join-us .holder .list {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.join-us .holder .list-item {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	padding: .5em;
+	width: 100%;
+}
+
+.join-us .holder .read-more {
+	width: 53%;
+	margin: 0 auto;
+}
+
+.join-us .holder .list-content {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	padding: 2em;
+	width: 100%;
+	background: #faf9f9;
+	margin: 0;
+	border: 1px solid #f99d1c;
+	border-radius: 10px;
+}
+
+.join-us .holder .list-content img {
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+}
+
+.join-us .holder .list-content p {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 0 auto;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+	line-height: 1.5;
+}
+
+.join-us .holder .list-content span {
+	font-style: italic;
+}
+
+.testimonials-text {
+	max-width: 43%;
+	margin: 0 auto 0;
+	line-height: 28px;
+}
+
+.testimonials-text h2 {
+	margin: 0 0 4px;
+}
+
+.testimonials-text .orange {
+	margin: 0 0 33px;
+}
+
 .name {
 	display: inline-block;
 	text-transform: uppercase;
@@ -1965,12 +2057,31 @@ a.anchor {
 	color: black;
 }
 
+.job-entry {
+	margin: 0 0 16px;
+}
+
+.job-entry h4 {
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: 600;
+	margin: 0 0 10px 0;
+}
+
 @media all and (min-width: 40em) {
 	.testimonials .holder .list-item {
 		width: 50%;
 	}
 
 	.testimonials .holder .list-content {
+		margin: 40px;
+	}
+
+	.join-us .holder .list-item {
+		width: 50%;
+	}
+
+	.join-us .holder .list-content {
 		margin: 40px;
 	}
 }
@@ -2085,6 +2196,11 @@ a.anchor {
 	}
 
 	.in-numbers .holder .in-numbers-text {
+		font-size: 16px;
+		line-height: 26px;
+	}
+
+	.testimonials-text {
 		font-size: 16px;
 		line-height: 26px;
 	}
@@ -2539,6 +2655,18 @@ a.anchor {
 	}
 
 	.in-numbers .holder .in-numbers-text {
+		max-width: 100%;
+		font-size: 18px;
+		line-height: 28px;
+		margin-bottom: 40px;
+	}
+
+	.join-us .holder {
+		padding-top: 28px;
+		padding-bottom: 50px;
+	}
+
+	.testimonials-text {
 		max-width: 100%;
 		font-size: 18px;
 		line-height: 28px;
