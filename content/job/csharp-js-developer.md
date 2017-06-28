@@ -27,6 +27,6 @@ We look for open-minded professionals, not afraid to step up if they think it wi
 Currently we're looking for senior developers who have knowledge about C# and AngularJS.
 The project involves building Microservices with RESTful APIs, securing it with Identity Server, applying event-driven patterns with messaging using NServiceBus. Primary storage is SQL Server. Unit tests and integrations tests are written on a daily basis and service documentation is done with Swagger.
 
-If that sounds cool to you, send us a message with your CV to <a href="mailto:careers@happyteam.io">carrers@happyteam.io</a>.
+If that sounds cool to you, send us a message with your CV to <a href="mailto:careers@happyteam.io">careers@happyteam.io</a>.
 
 We'd be thrilled to work with you and create some happy environment together!
