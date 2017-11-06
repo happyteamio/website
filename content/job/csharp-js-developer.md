@@ -18,7 +18,7 @@ If you want to join us, do some work and have fun in the process, just send us y
 - You will get your personal budget for sharpening your saw (books, conferences, workshops - you choose, no questions asked).  
 - Are you a conference speaker or want to be one? That's great! We fully support that, even financially!  
 - Do you want to rent an office or coworking space? We will help here too!  
-- B2B contract with reasonable hourly rate.  
+- B2B contract with a reasonable hourly rate.  
 
 ***What do we expect from you?***  
 Don't worry, you won't find list of acronyms and worthless certificates here.  
@@ -29,4 +29,4 @@ The project involves building Microservices with RESTful APIs, securing it with 
 
 If that sounds cool to you, send us a message with your CV to <a href="mailto:careers@happyteam.io">careers@happyteam.io</a>.
 
-We'd be thrilled to work with you and create some happy environment together!
+We'd be thrilled to work with you and create a happy environment together!
