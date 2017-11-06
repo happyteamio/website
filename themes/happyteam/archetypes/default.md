@@ -1,5 +1,6 @@
 +++
-title = "POST TITLE"
+title = "{{ replace .TranslationBaseName "-" " " | title }}"
+date = {{ .Date }}
 type = "post"
 description = "DESCRIPTION"
 author = "AUTHORS NICK"
