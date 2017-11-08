@@ -38,7 +38,7 @@ It's absolutely crucial to find a minimum version of your project that you will 
 There is no need to write all functionalities in just a few hours. We can substitute the data with any content and make it more realistic when MVP is done and there is still time left. Nobody will care if your application prints a dummy "Lorem ipsum" content.
 
 ### Collaborate
-Create a team repository and merge as often as you can. It will pay off in the long run when you don't have to solve complex conflicts that might appear the more code each member produces. A shared communication tool will help as well. Slack is super easy to setup and you will have links shared in one place, availble immediately for everybody.
+Create a team repository and merge as often as you can. It will pay off in the long run when you don't have to solve complex conflicts that might appear the more code each member produces. A shared communication tool will help as well. Slack is super easy to setup and you will have links shared in one place, available immediately for everybody.
 
 ### Take breaks
 I am sure there is at least coffee and water available around you. Whenever you feel out of ideas, get up, take a short walk or drink something. Your brain will be grateful and you will actually save time by not zombieing in front of the screen on the simplest thing.
