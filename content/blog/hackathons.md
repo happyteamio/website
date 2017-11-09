@@ -47,3 +47,5 @@ I am sure there is at least coffee and water available around you. Whenever you 
 In my opinion that's the most important part. When you're enjoying yourself, I am sure the overall gained experience will be much more valuable. Get as much as you can from the event. Meet new people, share contacts and talk to other teams. Discover things available there and make notes of the new things you saw.
 
 If you are still not convinced, drop me a line on social media, I am open to talk about it and will try to resolve your doubts.
+
+***Photo author***: [Matthew Roth](https://commons.wikimedia.org/wiki/User:Matthew_(WMF))
