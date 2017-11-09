@@ -4,7 +4,7 @@ date = 2017-11-06T19:06:01+01:00
 type = "post"
 description = "Many of us became programmers because we wanted to solve problems that we came across every day. It doesn't matter if we want to create a website for ourselves, write a mobile app that's missing from the store or program a robot just for fun. We are driven by curiosity and making machines to help us in the process is absolutely satisfying. How about we take all that passion, multiply by dozens of people and focus on solving real issues? That's the idea behind a hackathon - turning any idea into reality in a realtively short amount of time."
 author = "warna"
-cover: "/images/hackathons.jpg"
+cover = "/images/hackathons.jpg"
 +++
 
 Many of us became programmers because we wanted to solve problems that we came across every day. It doesn't matter if we want to create a website for ourselves, write a mobile app that's missing from the store or program a robot just for fun. We are driven by curiosity and making machines to help us in the process is absolutely satisfying. How about we take all that passion, multiply by dozens of people and focus on solving real issues? That's the idea behind a hackathon - turning any idea into reality in a realtively short amount of time. If you wanted to build a complete product from scratch it would take ages to plan, develop and test. The notion here is to quickly **hack** something together and aim for the minimum working result during a mar**athon** of coding. Let's try that, shall we?
