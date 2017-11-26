@@ -23,6 +23,10 @@ metaDataFormat = "yaml"
             fullname        = "Maciej Woźniak"
             bio             = "Software dev, interested in functional programming and learning new programming languages in general. Dreams of having an animal shelter. Also, a tea enthusiast, runner, gamer."
         [params.authors.amarszalek]
-                        image           = "/images/amarszalek.png"
-                        fullname        = "Artur Marszałek"
-                        bio             = "Young Java, JavaScript, C# dev. He still believes that clean code and unit tests make a difference. His motivation to work is a desire to continuously develop himself. He likes challenges and solving difficult problems. After work he tries to keep in shape."
+            image           = "/images/amarszalek.png"
+            fullname        = "Artur Marszałek"
+            bio             = "Young Java, JavaScript, C# dev. He still believes that clean code and unit tests make a difference. His motivation to work is a desire to continuously develop himself. He likes challenges and solving difficult problems. After work he tries to keep in shape."
+        [params.authors.warna]
+            image           = "/images/warna.png"
+            fullname        = "Damian Tarnacki"
+            bio             = "A developer that believes that optimised workflow for a user matters. Experienced in all layers but having more passion for building frontend with perfectly aligned elements. Always up for riddles and weekend travels."
