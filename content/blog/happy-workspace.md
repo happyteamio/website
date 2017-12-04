@@ -1,5 +1,6 @@
 +++
 title = "Does your workspace have to be boring?"
+date: 	2017-12-04
 type = "post"
 description = "You just got hired in a company. A big one. The one you always dreamed about. Today is your first, exciting day. You arrive at 9 A.M. sharp, your supervisor welcomes you and introduces to rules and customs in the company. First stop, kitchen and coffee machine (yay, freshly brewed drink of gods). Second stop, chill room and hammocks, sweet. Third stop, your team (open)room and your desk with shiny laptop the IT guy delivered a few seconds ago. You couldn’t be happier, could you?"
 author = "warna"
