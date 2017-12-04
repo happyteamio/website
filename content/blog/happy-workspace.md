@@ -4,7 +4,6 @@ type = "post"
 description = "You just got hired in a company. A big one. The one you always dreamed about. Today is your first, exciting day. You arrive at 9 A.M. sharp, your supervisor welcomes you and introduces to rules and customs in the company. First stop, kitchen and coffee machine (yay, freshly brewed drink of gods). Second stop, chill room and hammocks, sweet. Third stop, your team (open)room and your desk with shiny laptop the IT guy delivered a few seconds ago. You couldn’t be happier, could you?"
 author = "warna"
 cover = "/images/happy-workspace.jpg"
-draft = true
 +++
 
 You just got hired in a company. A big one. The one you always dreamed about. Today is your first, exciting day. You arrive at 9 A.M. sharp, your supervisor welcomes you and introduces to rules and customs in the company. First stop, kitchen and coffee machine (yay, freshly brewed drink of gods). Second stop, chill room and hammocks, sweet. Third stop, your team (open)room and your desk with a shiny laptop the IT guy delivered a few seconds ago. You couldn’t be happier, could you?
@@ -18,3 +17,5 @@ It all seems perfect if you work for a small or a really big and rich company. I
 We can achieve the same on a smaller scale preparing our workplace at home. Whether you are a full-time remote freelancer or just work from home one day a week, you should feel comfortable and motivated. What can be helpful? I gathered some ideas from our team. We keep plush plants on our desks, we surround ourselves with books or shelves filled in with board games, we place a whiteboard on the wall and put some magnets from cities we visited so project notes don’t look boring. Desks that are possible to be adjusted to standing position are also popular among us. It is possible to have a personalized keyboard with colorful keys just so you don’t get bored with standard black ones. Have you ever heard of a vertical ergonomic mouse? We have and it’s great to use! This is only a handful of notions what you could do with your workplace to feel more comfortable.
 
 Where will you stop the boredom and start with improving your happiness? Share your ideas with us!
+
+![](/images/post-happy-workspace/happyteam-workspaces.jpg)
