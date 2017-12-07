@@ -9,10 +9,10 @@ weight: 100
 
 ### We're looking for next Happy Developers!
 
-Currently we have few open positions for Happy Developers!  
+Currently we have a few open positions for Happy Developers!  
 If you want to join us, do some work and have fun in the process, just send us your CV to <a href="mailto:careers@happyteam.io">careers@happyteam.io</a>!
 
-***What we offer?***  
+***What do we offer?***  
 - Professional and respectful work atmosphere.  
 - Fully remote environment - you can work from anywhere!  
 - You will get your personal budget for sharpening your saw (books, conferences, workshops - you choose, no questions asked).  
