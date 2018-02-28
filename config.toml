@@ -31,6 +31,6 @@ metaDataFormat = "yaml"
             fullname        = "Damian Tarnacki"
             bio             = "A developer that believes that optimised workflow for a user matters. Experienced in all layers but having more passion for building frontend with perfectly aligned elements. Always up for riddles and weekend travels."
         [params.authors.kuba]
-            image           = "/images/bender.png"
+            image           = "/images/bender.jpg"
             fullname        = "Kuba Waliński"
             bio             = "Jack of all trades, master of none. Sometimes a team geak, sometimes a lone wolf or even a dark matter developer. Able to keep his nose above water at all times."
