@@ -3,7 +3,7 @@ title = "Happy Retreat"
 date = 2018-02-28T12:51:20+01:00
 type = "post"
 description = "Being a remote-centric company, we tremendously enjoy the rare occasions when we have a chance to meet each other in person. We strive to organise Happy Retreats every few months for exactly that purpose."
-author = "Kuba Waliński"
+author = "kuba"
 cover = "/images/post-happy-retreat/castle.jpg"
 +++
 
