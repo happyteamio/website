@@ -3,9 +3,8 @@ title = "Happy Retreat"
 date = 2018-02-28T12:51:20+01:00
 type = "post"
 description = "Being a remote-centric company, we tremendously enjoy the rare occasions when we have a chance to meet each other in person. We strive to organise Happy Retreats every few months for exactly that purpose."
-author = "Kuba"
+author = "Kuba Waliński"
 cover = "/images/post-happy-retreat/castle.jpg"
-draft = true
 +++
 
 Being a remote-centric company, we tremendously enjoy the rare occasions when we have a chance to meet each other in person. We strive to organise Happy Retreats every few months for exactly that purpose. In 2017 we had 2 such opportunities. In June we went to the Sulejów reservoir near Łódź, which is our city of origin and where most of our staff lives (although the geo-diversity is steadily increasing and currently out of 13 Happy Devs just 7 live in Łódź). The second gathering took place in the middle of December in Uniejów, a little town near Łódź that recently has made a name for itself thanks to massive investments in geo-thermal springs. They have built a huge aquapark with outside pools open all year round. There is also a recently renovated castle nearby which we chose as our place to stay for that weekend. In this post I wanted to share our plans for the weekend, asses each activity and draw some conclusions for the future as well as offer advice for others with regards to organising company retreats.
