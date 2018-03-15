@@ -1,8 +1,8 @@
 box: ubuntu
 website-build:
   steps:
-    - arjen/hugo-build@1.13.1:
-        version: "0.17"
+    - arjen/hugo-build:
+        version: "0.37"
 website-deploy:
   steps:
     - install-packages:
