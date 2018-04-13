@@ -1,7 +1,7 @@
 ---
 date: 2017-03-14T23:00:07+01:00
 description: We're looking for passionate developers! Don't hesitate, let's meet!
-draft: false
+draft: true
 title: Happy Developer
 type: job
 weight: 100
