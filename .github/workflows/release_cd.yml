@@ -1,4 +1,4 @@
-name: Hugo
+name: Deploy
 
 on:
   push:
@@ -12,7 +12,8 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
           submodules: true
           fetch-depth: 0
@@ -24,3 +25,11 @@ jobs:
 
       - name: Build
         run: hugo --minify
+
+      - name: Deploy
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: ${{ secrets.FTP_SERVER }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: public
